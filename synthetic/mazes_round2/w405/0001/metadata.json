@@ -1,0 +1,18 @@
+{
+ "game_id": "w405-0001",
+ "title": "synthetic switch maze n=12",
+ "class_name": "W405",
+ "baseline_actions": [
+  184,
+  196,
+  195,
+  185,
+  143,
+  219
+ ],
+ "tags": [
+  "synthetic",
+  "d4",
+  "calib"
+ ]
+}

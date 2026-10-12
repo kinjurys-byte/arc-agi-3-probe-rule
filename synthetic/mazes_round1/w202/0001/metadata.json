@@ -1,0 +1,18 @@
+{
+ "game_id": "w202-0001",
+ "title": "synthetic switch maze n=8",
+ "class_name": "W202",
+ "baseline_actions": [
+  98,
+  94,
+  99,
+  79,
+  75,
+  97
+ ],
+ "tags": [
+  "synthetic",
+  "d2",
+  "eval"
+ ]
+}

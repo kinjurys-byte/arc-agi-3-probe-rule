@@ -1,0 +1,16 @@
+# local environment and secrets (never commit)
+.venv/
+.env
+.kaggle/
+kaggle.json
+
+# third-party code and game files that are not redistributed
+vendor/
+environment_files/
+
+# per-step logs are large; summaries live in results.jsonl
+runs/*/logs/
+
+__pycache__/
+*.pyc
+.DS_Store

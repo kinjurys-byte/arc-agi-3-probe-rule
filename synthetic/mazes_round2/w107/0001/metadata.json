@@ -1,0 +1,18 @@
+{
+ "game_id": "w107-0001",
+ "title": "synthetic switch maze n=6",
+ "class_name": "W107",
+ "baseline_actions": [
+  62,
+  66,
+  47,
+  55,
+  59,
+  55
+ ],
+ "tags": [
+  "synthetic",
+  "d1",
+  "calib"
+ ]
+}

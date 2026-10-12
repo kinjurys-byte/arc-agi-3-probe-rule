@@ -1,0 +1,41 @@
+r105   B  s1  levels 1/6  actions  2707  probes    0  RHAE 0.001  2.71s
+r105   B  s0  levels 1/6  actions  2744  probes    0  RHAE 0.001  2.59s
+r105   B  s2  levels 2/6  actions  3179  probes    0  RHAE 0.043  3.11s
+r106   B  s0  levels 2/6  actions  4152  probes    0  RHAE 0.003  4.27s
+r106   B  s1  levels 1/6  actions  1716  probes    0  RHAE 0.041  1.61s
+r106   B  s2  levels 2/6  actions  4152  probes    0  RHAE 0.003  4.01s
+r107   B  s0  levels 2/6  actions  3583  probes    0  RHAE 0.006  3.75s
+r107   B  s1  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.53s
+r205   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.36s
+r107   B  s2  levels 2/6  actions  3808  probes    0  RHAE 0.004  3.38s
+r205   B  s1  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.62s
+r205   B  s2  levels 2/6  actions  1722  probes    0  RHAE 2.093  2.06s
+r206   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.57s
+r206   B  s1  levels 2/6  actions  1984  probes    0  RHAE 0.085  2.11s
+r206   B  s2  levels 2/6  actions  2303  probes    0  RHAE 0.33  2.46s
+r207   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.57s
+r207   B  s1  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.65s
+r207   B  s2  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.38s
+r305   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  1.82s
+r305   B  s1  levels 0/6  actions  1500  probes    0  RHAE 0.0  2.6s
+r306   B  s0  levels 1/6  actions  1754  probes    0  RHAE 0.036  3.79s
+r305   B  s2  levels 2/6  actions  3429  probes    0  RHAE 0.009  7.79s
+r306   B  s1  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.61s
+r307   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.75s
+r306   B  s2  levels 1/6  actions  2431  probes    0  RHAE 0.003  6.34s
+r307   B  s1  levels 2/6  actions  1720  probes    0  RHAE 3.309  3.93s
+r307   B  s2  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.38s
+r405   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  4.08s
+r405   B  s1  levels 1/6  actions  1795  probes    0  RHAE 0.032  4.96s
+r405   B  s2  levels 1/6  actions  1796  probes    0  RHAE 0.031  4.72s
+r406   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.55s
+r406   B  s1  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.26s
+r406   B  s2  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.21s
+r407   B  s0  levels 0/6  actions  1500  probes    0  RHAE 0.0  3.15s
+r407   B  s1  levels 1/6  actions  1713  probes    0  RHAE 0.077  4.17s
+r407   B  s2  levels 2/6  actions  2067  probes    0  RHAE 0.495  3.6s
+
+mean RHAE (percent) by config
+  B                   0.183   levels/run  0.83   runs 36
+
+results: runs/rooms_pilot2B/results.jsonl

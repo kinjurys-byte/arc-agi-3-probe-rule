@@ -1,0 +1,19 @@
+{
+ "game_id": "r105-0001",
+ "title": "synthetic switch room n=12",
+ "class_name": "R105",
+ "baseline_actions": [
+  11,
+  11,
+  8,
+  9,
+  10,
+  10
+ ],
+ "tags": [
+  "synthetic",
+  "rooms",
+  "d1",
+  "calib"
+ ]
+}

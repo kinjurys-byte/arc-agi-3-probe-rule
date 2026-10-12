@@ -1,0 +1,19 @@
+{
+ "game_id": "r403-0001",
+ "title": "synthetic switch room n=28",
+ "class_name": "R403",
+ "baseline_actions": [
+  25,
+  25,
+  27,
+  27,
+  26,
+  24
+ ],
+ "tags": [
+  "synthetic",
+  "rooms",
+  "d4",
+  "eval"
+ ]
+}

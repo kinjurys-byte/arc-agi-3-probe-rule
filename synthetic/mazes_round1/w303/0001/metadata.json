@@ -1,0 +1,18 @@
+{
+ "game_id": "w303-0001",
+ "title": "synthetic switch maze n=10",
+ "class_name": "W303",
+ "baseline_actions": [
+  130,
+  154,
+  125,
+  143,
+  143,
+  151
+ ],
+ "tags": [
+  "synthetic",
+  "d3",
+  "eval"
+ ]
+}

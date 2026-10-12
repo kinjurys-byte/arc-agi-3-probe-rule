@@ -1,0 +1,4 @@
+arc-agi==0.9.9
+arcengine==0.9.3
+numpy==2.5.4
+matplotlib==3.11.2

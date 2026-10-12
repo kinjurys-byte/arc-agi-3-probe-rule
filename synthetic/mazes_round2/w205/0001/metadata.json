@@ -1,0 +1,18 @@
+{
+ "game_id": "w205-0001",
+ "title": "synthetic switch maze n=8",
+ "class_name": "W205",
+ "baseline_actions": [
+  94,
+  88,
+  87,
+  85,
+  113,
+  101
+ ],
+ "tags": [
+  "synthetic",
+  "d2",
+  "calib"
+ ]
+}
