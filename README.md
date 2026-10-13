@@ -6,6 +6,7 @@ This repository holds the agent, the synthetic game suites, the results of every
 
 - Paper: Kaggle Writeup, ARC Prize 2026 Paper Track (link added after submission)
 - Code submission: ARC-AGI-3 Kaggle notebook (link added after submission)
+- Technical appendix (A to H, cited by the paper): [docs/appendix.md](docs/appendix.md)
 
 ![One step of the agent](figs/figure1_agent_loop.png)
 
@@ -37,6 +38,8 @@ Second pre-registered round, 16 evaluation games per suite, five seeds each. Gam
 - Two trivial controls, R (repeat an action until the frame stops changing) and K (click every object once), completed no level in any synthetic game (320 runs). On the 10 held-out public games they completed 8 levels in 100 runs, all by K in one click game (vc33), while B and C completed 31 and 36 levels in 50 runs each.
 - Kaggle (ARC-AGI-3 public leaderboard): the submitted agent, C with rho = 3e-4 and q = 0.5, scores 0.37 (RHAE in percent).
 - On the 10 held-out public games, calibrated on the other 15 (rho = 3e-4, q = 0.5), C was no better than B or C' (mean RHAE 0.082% for B, 0.079% for C, 0.110% for C'). The agent completes under one level per game there, so H1 could not be tested.
+- C' could not spend its whole allotment, because the quota of a level it never reached lapsed and, in mazes, little was left unknown: it used 61% in rooms, 31% in mazes and 30% on real games (Appendix E). C1 (q = 1) had a slightly higher mean RHAE than C in both suites and on real games.
+- Two thirds of C's room gain over B came in levels 1 and 2, and with rho at the top of its grid the rule held within six actions in most room levels, so the rooms test early probing more than the rule's exact threshold (Appendix H).
 - Exploratory follow-ups: in rooms, most of C's gain came from learning its four moves early rather than from the designed switch (step-log replays). An ablation that gives every agent its moves and removes the door before level 3 isolates the switch: C beat B on levels 3 to 6 in 12 of 14 untied games, but level-1 probe costs offset this in total RHAE (C above B in 9 of 16).
 
 The first round (mazes only) failed H2 and H4 because of two bugs: the click-priority threshold rose to its maximum at the first action of every game, and floor and wall pieces got a new type key at every state, so most probes went to floor tiles. Its agent is kept in `archive/round1/` and its results in `runs/syn_r1_*`.
@@ -53,6 +56,7 @@ synthetic/               the generated suites, in the local ARC-AGI-3 game forma
   rooms_ablation/        rooms evaluation games without a door before level 3
 runs/                    one results.jsonl per run (plus console.log where kept)
 figs/                    figures 1 to 3, the level-3 replay GIF and the scripts that draw them
+docs/appendix.md         technical appendix A to H (protocol, agent, rule, hyperparameters, suites, history)
 docs/registration_ko.md  the pre-registration record (Korean, as written before the runs)
 archive/round1/          the round-1 agent and its q values
 splits.json              frozen design / held-out split of the 25 public games

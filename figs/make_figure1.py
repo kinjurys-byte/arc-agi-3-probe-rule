@@ -180,8 +180,17 @@ def build():
     rhs, rw, rt, rb = math_path(r"$\frac{j}{\hat{a}_j\,\hat{r}_j^{\,2}}$", 34)
     gap = 34
     total = lw + gap + gw + gap + rw
-    fx0, fy0, fh = 220, 556, 168
-    fw = 404
+    # symbols of the rule, defined under it so the figure stands alone
+    legend = [(r"$\rho$", "share of a later level's actions one learned effect saves"),
+              (r"$q$", "chance of completing each further level"),
+              (r"$\hat{a}_j$", "actions spent so far in level j"),
+              (r"$\hat{r}_j$", "estimated agent / human action ratio of the previous level"),
+              (r"$r_*$", "action ratio assumed for later levels (2)")]
+    row = 21
+    fx0, fy0, fw = 204, 494, 452
+    cap_y = fy0 + 150
+    rule_y = cap_y + 16
+    fh = rule_y - fy0 + 14 + row * len(legend) + 6
     el.append(box(fx0, fy0, fw, fh, fill=PANEL, stroke=None, rx=14))
     el.append(text(fx0 + 22, fy0 + 32, "THE PROBE RULE, FROM THE SCORE", 12.5, 600, INK2, spacing=1.4))
     x = fx0 + (fw - total) / 2
@@ -193,9 +202,14 @@ def build():
     x += gw + gap
     el.append(f'<path transform="translate({x:.1f},{base:.1f})" d="{rhs}" fill="{INK}"/>')
     rhs_c = x + rw / 2
-    cap_y = fy0 + fh - 18
     el.append(text(lhs_c, cap_y, "expected saving later", 14, 400, INK2, "middle"))
     el.append(text(rhs_c, cap_y, "cost of an action now", 14, 400, INK2, "middle"))
+    el.append(f'<path d="M{fx0 + 22} {rule_y} L{fx0 + fw - 22} {rule_y}" stroke="#dcdcdc" stroke-width="1"/>')
+    for k, (sym, desc) in enumerate(legend):
+        yb = rule_y + 14 + row * (k + 1) - 6
+        path, sw_, st, sb = math_path(sym, 17.5)
+        el.append(f'<path transform="translate({fx0 + 22:.1f},{yb:.1f})" d="{path}" fill="{INK}"/>')
+        el.append(text(fx0 + 74, yb, desc, 13, 400, INK2))
     # dashed leader to the diamond's lower-left edge
     ex, ey = dcx - hw / 2, y1 + hh / 2
     el.append(f'<path d="M{fx0 + fw - 30:.1f} {fy0:.1f} L{ex - 4:.1f} {ey + 3:.1f}" stroke="{MUTED}" '
