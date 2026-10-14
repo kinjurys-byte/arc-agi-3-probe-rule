@@ -15,6 +15,8 @@ Configurations (environment variable ARC_AGENT_CONFIG, default "C"):
   CR   control C'r (exploratory, 2026-10-14): CU, but the budget is split
        over the levels C reached in the same game and seed (ARC_PROBE_LEVELS)
        instead of all levels, so quota of levels C never reached is not lost
+  CA   control (exploratory, 2026-10-14): always probe, i.e. try an untried
+       action of unknown effect first whenever there is one, in every level
   R    trivial control: hold one action until it leaves the frame unchanged
        twice in a row, then move to the next in a fixed cycle (ACTION1-5,
        then a click on the most salient object); no search, table or probes
@@ -95,6 +97,7 @@ CONFIG_ALIASES = {
     "C_PRIME": "CU",
     "UNIFORM": "CU",
     "CR": "CR",
+    "CA": "CA",
     "C'R": "CR",
     "R": "R",
     "REPEAT": "R",
@@ -1125,6 +1128,8 @@ class MyAgent(Agent):
         return [c for c in self._cands(nid) if c.local not in tried]
 
     def _probe_ok(self) -> bool:
+        if self.config == "CA":
+            return True
         j = (self.level or 0) + 1
         if self.config == "C":
             # value of information for later levels, each weighted by the
@@ -1164,7 +1169,7 @@ class MyAgent(Agent):
         # Probing is a discretionary decision: without it (A, B, or when the
         # rule says no) actions of unknown effect are tried only once nothing
         # known to work is left to try anywhere in the level graph.
-        probe = self.config in ("C", "CU", "CR") and self._probe_ok()
+        probe = self.config in ("C", "CU", "CR", "CA") and self._probe_ok()
         # Click priority threshold for the whole level graph: lower-priority
         # clicks are considered only once nothing at the current threshold is
         # left untried anywhere reachable. The threshold is raised only when

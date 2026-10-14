@@ -13,6 +13,7 @@ Configs
        over levels; C runs first
   CR   control C'r (exploratory): as CU, but split evenly over the levels C
        reached in the same game and seed; C runs first
+  CA   control (exploratory): always probe, without the rule
 
 Examples
   .venv/bin/python scripts/run_experiments.py --games ls20 --configs C --seeds 0
