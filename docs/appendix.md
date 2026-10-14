@@ -56,7 +56,7 @@ Write the action ratio as r = a/h and assume a settled effect saves a fraction Ï
 
 Figure 2 uses the per-level human baselines of the 25 public games. The last level takes a median 3.9 times the human actions of the first (more in 21 of 25 games). For an agent equally slow in every level, saving one action in level i is worth iÂ·h_1/h_i times saving one in level 1: a median 1.54 in the last level (quartiles 0.86 to 4.32). Saving a fixed share of a level is worth i times as much, whatever the level's length, and that is what the rule assumes information buys.
 
-The discount did not help on average: C1 had a higher mean RHAE than C in rooms (0.590% against 0.580%; 0.940% against 0.745% in the replication), mazes (1.078% against 1.040%) and the held-out real games (0.093% against 0.079%), although C was above C1 in 9 of 12 untied round-2 rooms. CQ also had a higher mean than C (0.651% and 0.886% against 0.580% and 0.745%) but was above it in only 12 of 24 untied games over both room sets.
+The discount did not help on average: C1 had a higher mean RHAE than C in rooms (0.590% against 0.580%; 0.940% against 0.745% in the replication), mazes (1.078% against 1.040%), cluttered rooms (1.285% against 1.179%; identical at 60% clutter, where q = 1) and the held-out real games (0.093% against 0.079%), although C was above C1 in 9 of 12 untied round-2 rooms. CQ also had a higher mean than C (0.651% and 0.886% against 0.580% and 0.745%) but was above it in only 12 of 24 untied games over both room sets.
 
 ## F. Hyperparameters
 
