@@ -251,6 +251,8 @@ def main() -> None:
                 "l1_n": l1.get("n"), "l1_stuck": l1.get("stuck"), "l1_first_stuck": l1.get("first_stuck"),
                 "l1_first_useful": l1.get("first_useful"),
                 "useful_types": len(v["first_use"]), "tried_types": len(v["first_try"]),
+                "l1_useful_simple": sum(1 for k, u in v["first_use"].items() if u[0] == 1 and k.startswith("a")),
+                "l1_useful_click": sum(1 for k, u in v["first_use"].items() if u[0] == 1 and k.startswith("c")),
                 "logged_steps": sum(L["n"] for L in v["levels"].values()),
             })
         result["suites"][d.name] = {
