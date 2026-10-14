@@ -1,0 +1,28 @@
+{
+ "game_id": "k206-0001",
+ "title": "synthetic cluttered room n=16 clutter=0.2",
+ "class_name": "K206",
+ "baseline_actions": [
+  13,
+  14,
+  14,
+  26,
+  16,
+  14
+ ],
+ "tags": [
+  "synthetic",
+  "clutter",
+  "d2",
+  "calib"
+ ],
+ "clutter": 0.2,
+ "clutter_share_by_level": [
+  0.198,
+  0.198,
+  0.198,
+  0.198,
+  0.198,
+  0.198
+ ]
+}

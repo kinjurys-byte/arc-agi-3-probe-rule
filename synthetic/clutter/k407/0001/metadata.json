@@ -1,0 +1,28 @@
+{
+ "game_id": "k407-0001",
+ "title": "synthetic cluttered room n=16 clutter=0.6",
+ "class_name": "K407",
+ "baseline_actions": [
+  16,
+  19,
+  20,
+  13,
+  22,
+  20
+ ],
+ "tags": [
+  "synthetic",
+  "clutter",
+  "d4",
+  "calib"
+ ],
+ "clutter": 0.6,
+ "clutter_share_by_level": [
+  0.599,
+  0.595,
+  0.591,
+  0.579,
+  0.599,
+  0.567
+ ]
+}
