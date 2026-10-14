@@ -1,8 +1,10 @@
-"""Figures 2 and 3 for the paper (achromatic). Writes PNG (200 dpi) and SVG next to this script.
+"""Figure 2 of the paper and appendix Figure A1 (achromatic). Writes PNG (200 dpi) and SVG next
+to this script. Figure 3 of the paper (cluttered rooms) is drawn by figs/make_clutter_figure.py.
 
 Figure 2 reads the human baselines of the 25 public games stored in runs/real_calib and
-runs/real_heldout. Figure 3 reads runs/syn_rooms_confirm, runs/syn_rooms_ablation and
-runs/syn_r2_mazes_confirm. usage: python figs/make_charts.py
+runs/real_heldout. Figure A1 (where the score comes from; Figure 3 of paper versions up to v6)
+reads runs/syn_rooms_confirm, runs/syn_rooms_ablation and runs/syn_r2_mazes_confirm.
+usage: python figs/make_charts.py
 """
 import json
 from pathlib import Path
@@ -96,7 +98,7 @@ def figure2(min_games=5):
     return levels, med, lo, hi, n
 
 
-# ---------------------------------------------------------------- Figure 3
+# ---------------------------------------------------------------- Figure A1
 def contributions(r):
     base = r["baseline"]
     n = len(base)
@@ -174,7 +176,7 @@ def figure3():
     fig.legend(handles=handles, loc="upper right", ncol=2, frameon=False, fontsize=9.5,
                bbox_to_anchor=(0.995, 1.0), labelcolor=INK)
     fig.tight_layout(rect=(0, 0.0, 1, 0.94), w_pad=2.5)
-    save(fig, "figure3_where_gains_come_from")
+    save(fig, "figureA1_where_gains_come_from")
     return data
 
 

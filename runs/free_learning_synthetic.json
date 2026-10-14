@@ -1884,6 +1884,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 9,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3317
     },
     {
@@ -1901,6 +1903,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 7,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2477
     },
     {
@@ -1918,6 +1922,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 9,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2535
     },
     {
@@ -1935,6 +1941,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 11,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 3058
     },
     {
@@ -1952,6 +1960,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2928
     },
     {
@@ -1969,6 +1979,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2025
     },
     {
@@ -1986,6 +1998,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2641
     },
     {
@@ -2003,6 +2017,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2737
     },
     {
@@ -2020,6 +2036,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2702
     },
     {
@@ -2037,6 +2055,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2495
     },
     {
@@ -2054,6 +2074,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2442
     },
     {
@@ -2071,6 +2093,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 3284
     },
     {
@@ -2088,6 +2112,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3236
     },
     {
@@ -2105,6 +2131,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 9,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2274
     },
     {
@@ -2122,6 +2150,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 3284
     },
     {
@@ -2139,6 +2169,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2276
     },
     {
@@ -2156,6 +2188,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2269
     },
     {
@@ -2173,6 +2207,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2685
     },
     {
@@ -2190,6 +2226,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2651
     },
     {
@@ -2207,6 +2245,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2275
     },
     {
@@ -2224,6 +2264,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 7,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2934
     },
     {
@@ -2241,6 +2283,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 7,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2703
     },
     {
@@ -2258,6 +2302,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 11,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2585
     },
     {
@@ -2275,6 +2321,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 7,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2936
     },
     {
@@ -2292,6 +2340,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 6,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2602
     },
     {
@@ -2309,6 +2359,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2182
     },
     {
@@ -2326,6 +2378,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2439
     },
     {
@@ -2343,6 +2397,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2119
     },
     {
@@ -2360,6 +2416,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2649
     },
     {
@@ -2377,6 +2435,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2483
     },
     {
@@ -2394,6 +2454,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2934
     },
     {
@@ -2411,6 +2473,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3895
     },
     {
@@ -2428,6 +2492,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3245
     },
     {
@@ -2445,6 +2511,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2851
     },
     {
@@ -2462,6 +2530,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2754
     },
     {
@@ -2479,6 +2549,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2570
     },
     {
@@ -2496,6 +2568,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2864
     },
     {
@@ -2513,6 +2587,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2644
     },
     {
@@ -2530,6 +2606,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2336
     },
     {
@@ -2547,6 +2625,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2810
     },
     {
@@ -2564,6 +2644,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 9,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3617
     },
     {
@@ -2581,6 +2663,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1982
     },
     {
@@ -2598,6 +2682,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 8,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2945
     },
     {
@@ -2615,6 +2701,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 11,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2535
     },
     {
@@ -2632,6 +2720,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 7,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 5475
     },
     {
@@ -2649,6 +2739,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2705
     },
     {
@@ -2666,6 +2758,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2684
     },
     {
@@ -2683,6 +2777,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3395
     },
     {
@@ -2700,6 +2796,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 5381
     },
     {
@@ -2717,6 +2815,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3015
     },
     {
@@ -2734,6 +2834,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 8,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2734
     },
     {
@@ -2751,6 +2853,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3366
     },
     {
@@ -2768,6 +2872,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2082
     },
     {
@@ -2785,6 +2891,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2225
     },
     {
@@ -2802,6 +2910,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2405
     },
     {
@@ -2819,6 +2929,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 5180
     },
     {
@@ -2836,6 +2948,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 19,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3786
     },
     {
@@ -2853,6 +2967,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4124
     },
     {
@@ -2870,6 +2986,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 19,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3991
     },
     {
@@ -2887,6 +3005,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 19,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2671
     },
     {
@@ -2904,6 +3024,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -2921,6 +3043,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3273
     },
     {
@@ -2938,6 +3062,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 11,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2329
     },
     {
@@ -2955,6 +3081,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 7,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2737
     },
     {
@@ -2972,6 +3100,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -2989,6 +3119,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 21,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4328
     },
     {
@@ -3006,6 +3138,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 21,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4764
     },
     {
@@ -3023,6 +3157,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 19,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4168
     },
     {
@@ -3040,6 +3176,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 18,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2019
     },
     {
@@ -3057,6 +3195,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 21,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4761
     },
     {
@@ -3074,6 +3214,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 11,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 5327
     },
     {
@@ -3091,6 +3233,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3100
     },
     {
@@ -3108,6 +3252,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 6,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3803
     },
     {
@@ -3125,6 +3271,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3233
     },
     {
@@ -3142,6 +3290,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 6,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3195
     },
     {
@@ -3159,6 +3309,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 14,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1915
     },
     {
@@ -3176,6 +3328,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4035
     },
     {
@@ -3193,6 +3347,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4514
     },
     {
@@ -3210,6 +3366,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4033
     },
     {
@@ -3227,6 +3385,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4514
     },
     {
@@ -3244,6 +3404,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3261,6 +3423,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2903
     },
     {
@@ -3278,6 +3442,8 @@
      "l1_first_useful": 2,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2407
     },
     {
@@ -3295,6 +3461,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2748
     },
     {
@@ -3312,6 +3480,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2033
     },
     {
@@ -3329,6 +3499,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 20,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2179
     },
     {
@@ -3346,6 +3518,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1696
     },
     {
@@ -3363,6 +3537,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 14,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -3380,6 +3556,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1627
     },
     {
@@ -3397,6 +3575,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1615
     },
     {
@@ -3414,6 +3594,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 4044
     },
     {
@@ -3431,6 +3613,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2034
     },
     {
@@ -3448,6 +3632,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3924
     },
     {
@@ -3465,6 +3651,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2242
     },
     {
@@ -3482,6 +3670,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 3174
     },
     {
@@ -3499,6 +3689,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 18,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1902
     },
     {
@@ -3516,6 +3708,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1626
     },
     {
@@ -3533,6 +3727,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3807
     },
     {
@@ -3550,6 +3746,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1549
     },
     {
@@ -3567,6 +3765,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3233
     },
     {
@@ -3584,6 +3784,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3601,6 +3803,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2273
     },
     {
@@ -3618,6 +3822,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 1783
     },
     {
@@ -3635,6 +3841,8 @@
      "l1_first_useful": 2,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3652,6 +3860,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3669,6 +3879,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -3686,6 +3898,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -3703,6 +3917,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 19,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1951
     },
     {
@@ -3720,6 +3936,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 17,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1622
     },
     {
@@ -3737,6 +3955,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -3754,6 +3974,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2726
     },
     {
@@ -3771,6 +3993,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3788,6 +4012,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2749
     },
     {
@@ -3805,6 +4031,8 @@
      "l1_first_useful": 2,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2812
     },
     {
@@ -3822,6 +4050,8 @@
      "l1_first_useful": 2,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3839,6 +4069,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 18,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4078
     },
     {
@@ -3856,6 +4088,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 18,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2339
     },
     {
@@ -3873,6 +4107,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 14,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -3890,6 +4126,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 14,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1547
     },
     {
@@ -3907,6 +4145,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 14,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1626
     },
     {
@@ -3924,6 +4164,8 @@
      "l1_first_useful": 2,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2046
     },
     {
@@ -3941,6 +4183,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -3958,6 +4202,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 2045
     },
     {
@@ -3975,6 +4221,8 @@
      "l1_first_useful": 2,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 1813
     },
     {
@@ -3992,6 +4240,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2391
     },
     {
@@ -4009,6 +4259,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1552
     },
     {
@@ -4026,6 +4278,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1657
     },
     {
@@ -4043,6 +4297,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4060,6 +4316,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1553
     },
     {
@@ -4077,6 +4335,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4094,6 +4354,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 4,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 3059
     },
     {
@@ -4111,6 +4373,8 @@
      "l1_first_useful": 1,
      "useful_types": 4,
      "tried_types": 5,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 3060
     },
     {
@@ -4128,6 +4392,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4145,6 +4411,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 2,
+     "l1_useful_click": 0,
      "logged_steps": 3187
     },
     {
@@ -4162,6 +4430,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4179,6 +4449,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4196,6 +4468,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1553
     },
     {
@@ -4213,6 +4487,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4230,6 +4506,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1636
     },
     {
@@ -4247,6 +4525,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1664
     },
     {
@@ -4264,6 +4544,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4281,6 +4563,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4298,6 +4582,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4315,6 +4601,8 @@
      "l1_first_useful": 2,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4332,6 +4620,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4349,6 +4639,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4366,6 +4658,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1902
     },
     {
@@ -4383,6 +4677,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1754
     },
     {
@@ -4400,6 +4696,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4417,6 +4715,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1598
     },
     {
@@ -4434,6 +4734,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2027
     },
     {
@@ -4451,6 +4753,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 4,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4468,6 +4772,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 2026
     },
     {
@@ -4485,6 +4791,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4502,6 +4810,8 @@
      "l1_first_useful": 1,
      "useful_types": 3,
      "tried_types": 3,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 0,
      "logged_steps": 1500
     },
     {
@@ -4519,6 +4829,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2019
     },
     {
@@ -4536,6 +4848,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4553,6 +4867,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4570,6 +4886,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -4587,6 +4905,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1740
     }
    ]
@@ -6288,6 +6608,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2840
     },
     {
@@ -6305,6 +6627,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2841
     },
     {
@@ -6322,6 +6646,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2967
     },
     {
@@ -6339,6 +6665,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 12,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 2217
     },
     {
@@ -6356,6 +6684,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2966
     },
     {
@@ -6373,6 +6703,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2819
     },
     {
@@ -6390,6 +6722,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2819
     },
     {
@@ -6407,6 +6741,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2978
     },
     {
@@ -6424,6 +6760,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2817
     },
     {
@@ -6441,6 +6779,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2977
     },
     {
@@ -6458,6 +6798,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3396
     },
     {
@@ -6475,6 +6817,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2589
     },
     {
@@ -6492,6 +6836,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3418
     },
     {
@@ -6509,6 +6855,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2666
     },
     {
@@ -6526,6 +6874,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2590
     },
     {
@@ -6543,6 +6893,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2112
     },
     {
@@ -6560,6 +6912,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2618
     },
     {
@@ -6577,6 +6931,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3455
     },
     {
@@ -6594,6 +6950,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2305
     },
     {
@@ -6611,6 +6969,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2615
     },
     {
@@ -6628,6 +6988,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2431
     },
     {
@@ -6645,6 +7007,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2432
     },
     {
@@ -6662,6 +7026,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2461
     },
     {
@@ -6679,6 +7045,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2520
     },
     {
@@ -6696,6 +7064,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2424
     },
     {
@@ -6713,6 +7083,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2476
     },
     {
@@ -6730,6 +7102,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2465
     },
     {
@@ -6747,6 +7121,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1808
     },
     {
@@ -6764,6 +7140,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1808
     },
     {
@@ -6781,6 +7159,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2467
     },
     {
@@ -6798,6 +7178,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1920
     },
     {
@@ -6815,6 +7197,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1945
     },
     {
@@ -6832,6 +7216,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1967
     },
     {
@@ -6849,6 +7235,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1921
     },
     {
@@ -6866,6 +7254,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1967
     },
     {
@@ -6883,6 +7273,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1928
     },
     {
@@ -6900,6 +7292,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1904
     },
     {
@@ -6917,6 +7311,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1857
     },
     {
@@ -6934,6 +7330,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1928
     },
     {
@@ -6951,6 +7349,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1859
     },
     {
@@ -6968,6 +7368,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -6985,6 +7387,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4942
     },
     {
@@ -7002,6 +7406,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3705
     },
     {
@@ -7019,6 +7425,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7036,6 +7444,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7053,6 +7463,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7070,6 +7482,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4943
     },
     {
@@ -7087,6 +7501,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4943
     },
     {
@@ -7104,6 +7520,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7121,6 +7539,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7138,6 +7558,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3676
     },
     {
@@ -7155,6 +7577,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3674
     },
     {
@@ -7172,6 +7596,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3610
     },
     {
@@ -7189,6 +7615,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3546
     },
     {
@@ -7206,6 +7634,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3610
     },
     {
@@ -7223,6 +7653,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3670
     },
     {
@@ -7240,6 +7672,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4156
     },
     {
@@ -7257,6 +7691,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2309
     },
     {
@@ -7274,6 +7710,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3476
     },
     {
@@ -7291,6 +7729,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2309
     },
     {
@@ -7308,6 +7748,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4666
     },
     {
@@ -7325,6 +7767,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4667
     },
     {
@@ -7342,6 +7786,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4736
     },
     {
@@ -7359,6 +7805,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4737
     },
     {
@@ -7376,6 +7824,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 10,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3470
     },
     {
@@ -7393,6 +7843,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4695
     },
     {
@@ -7410,6 +7862,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4695
     },
     {
@@ -7427,6 +7881,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4123
     },
     {
@@ -7444,6 +7900,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4733
     },
     {
@@ -7461,6 +7919,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4116
     },
     {
@@ -7478,6 +7938,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4987
     },
     {
@@ -7495,6 +7957,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2645
     },
     {
@@ -7512,6 +7976,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2647
     },
     {
@@ -7529,6 +7995,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 5212
     },
     {
@@ -7546,6 +8014,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 4986
     },
     {
@@ -7563,6 +8033,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2468
     },
     {
@@ -7580,6 +8052,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2643
     },
     {
@@ -7597,6 +8071,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2644
     },
     {
@@ -7614,6 +8090,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 5084
     },
     {
@@ -7631,6 +8109,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2467
     },
     {
@@ -7648,6 +8128,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7665,6 +8147,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7682,6 +8166,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7699,6 +8185,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7716,6 +8204,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7733,6 +8223,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7750,6 +8242,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2391
     },
     {
@@ -7767,6 +8261,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7784,6 +8280,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7801,6 +8299,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2747
     },
     {
@@ -7818,6 +8318,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3523
     },
     {
@@ -7835,6 +8337,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 8,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 3258
     },
     {
@@ -7852,6 +8356,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 5008
     },
     {
@@ -7869,6 +8375,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2719
     },
     {
@@ -7886,6 +8394,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 5007
     },
     {
@@ -7903,6 +8413,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7920,6 +8432,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3134
     },
     {
@@ -7937,6 +8451,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3166
     },
     {
@@ -7954,6 +8470,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -7971,6 +8489,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3164
     },
     {
@@ -7988,6 +8508,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 6629
     },
     {
@@ -8005,6 +8527,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8022,6 +8546,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3584
     },
     {
@@ -8039,6 +8565,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3584
     },
     {
@@ -8056,6 +8584,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3817
     },
     {
@@ -8073,6 +8603,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 6896
     },
     {
@@ -8090,6 +8622,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 6636
     },
     {
@@ -8107,6 +8641,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8124,6 +8660,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8141,6 +8679,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 6634
     },
     {
@@ -8158,6 +8698,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3536
     },
     {
@@ -8175,6 +8717,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2610
     },
     {
@@ -8192,6 +8736,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3536
     },
     {
@@ -8209,6 +8755,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 3490
     },
     {
@@ -8226,6 +8774,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2611
     },
     {
@@ -8243,6 +8793,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2485
     },
     {
@@ -8260,6 +8812,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8277,6 +8831,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2485
     },
     {
@@ -8294,6 +8850,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8311,6 +8869,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2614
     },
     {
@@ -8328,6 +8888,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8345,6 +8907,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2899
     },
     {
@@ -8362,6 +8926,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2441
     },
     {
@@ -8379,6 +8945,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8396,6 +8964,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8413,6 +8983,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8430,6 +9002,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2901
     },
     {
@@ -8447,6 +9021,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2441
     },
     {
@@ -8464,6 +9040,8 @@
      "l1_first_useful": 4,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8481,6 +9059,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8498,6 +9078,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8515,6 +9097,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8532,6 +9116,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8549,6 +9135,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8566,6 +9154,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8583,6 +9173,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8600,6 +9192,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8617,6 +9211,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8634,6 +9230,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8651,6 +9249,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8668,6 +9268,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 15,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8685,6 +9287,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8702,6 +9306,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8719,6 +9325,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8736,6 +9344,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8753,6 +9363,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8770,6 +9382,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8787,6 +9401,8 @@
      "l1_first_useful": 2,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8804,6 +9420,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8821,6 +9439,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8838,6 +9458,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 6,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 0,
      "logged_steps": 4239
     },
     {
@@ -8855,6 +9477,8 @@
      "l1_first_useful": 5,
      "useful_types": 4,
      "tried_types": 16,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8872,6 +9496,8 @@
      "l1_first_useful": 3,
      "useful_types": 4,
      "tried_types": 15,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8889,6 +9515,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8906,6 +9534,8 @@
      "l1_first_useful": 3,
      "useful_types": 4,
      "tried_types": 16,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8923,6 +9553,8 @@
      "l1_first_useful": 1,
      "useful_types": 5,
      "tried_types": 13,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 2991
     },
     {
@@ -8940,6 +9572,8 @@
      "l1_first_useful": 5,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8957,6 +9591,8 @@
      "l1_first_useful": 3,
      "useful_types": 4,
      "tried_types": 16,
+     "l1_useful_simple": 3,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8974,6 +9610,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     },
     {
@@ -8991,6 +9629,8 @@
      "l1_first_useful": 3,
      "useful_types": 5,
      "tried_types": 16,
+     "l1_useful_simple": 4,
+     "l1_useful_click": 1,
      "logged_steps": 1500
     }
    ]
