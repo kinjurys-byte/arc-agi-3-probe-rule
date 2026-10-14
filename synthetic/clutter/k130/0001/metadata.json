@@ -1,0 +1,28 @@
+{
+ "game_id": "k130-0001",
+ "title": "synthetic cluttered room n=16 clutter=0.0",
+ "class_name": "K130",
+ "baseline_actions": [
+  13,
+  15,
+  14,
+  14,
+  13,
+  14
+ ],
+ "tags": [
+  "synthetic",
+  "clutter",
+  "d1",
+  "eval"
+ ],
+ "clutter": 0.0,
+ "clutter_share_by_level": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ]
+}
