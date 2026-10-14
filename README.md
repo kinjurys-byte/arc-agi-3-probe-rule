@@ -31,17 +31,17 @@ Second pre-registered round and its registered replication on 16 new room games 
 | H4 depth: gain falls with difficulty (Spearman < 0, p < 0.05) | +0.56, fail | +0.19, fail (predicted) | -0.29, p = 0.14, fail (predicted) |
 | H5 discount: C beats C1 in the 8 hardest games (≥ 60%) | 6 of 8, met | 3 of 8, not met | 3 of 8, not met |
 | H6 value: C beats B (≥ 60% of games, p < 0.05) | 12 of 16, p = 0.038, pass | 13 of 16, p = 0.011, pass | 6 of 14, p = 0.79, fail (predicted) |
-| C beats C'r, the same spend over the levels C reached | 10 of 16, p = 0.23 (exploratory) | 9 of 16, p = 0.40 | 7 of 14, p = 0.60 (exploratory) |
+| C beats C'r, the same budget over the levels C reached | 10 of 16, p = 0.23 (exploratory) | 9 of 16, p = 0.40 | 7 of 14, p = 0.60 (exploratory) |
 | Mean RHAE (%), B / C / C' | 0.114 / 0.580 / 0.288 | 0.175 / 0.745 / 0.563 | 1.113 / 1.040 / 1.173 |
 | Levels completed per run, B / C / C' | 2.49 / 3.60 / 3.23 | 2.58 / 3.61 / 3.52 | 3.09 / 2.80 / 3.20 |
 
 - Predictions were recorded before the runs. Round 2: everything passes in rooms; H2, H4 and H6 fail in mazes. Eight of the ten held: H4 failed in rooms, because early information also made later levels reachable, and H5 was not met in mazes. Replication (docs/registration_replication.md, committed before its games were generated): H1, H2 and H6 pass, H4 fails, no prediction for H5, C does not meet the criterion against C'r, and CQ's mean is at least C's. Five of the six held; H2 did not replicate. H3 (choosing probe targets by information gain) was not run.
-- What held up: probing before being stuck. C beat B in 25 of the 32 room games (p = 0.001), and so did the uniform schedules C' and C'r in most games, while C's edge over C'r was not significant (19 of 32, p = 0.19). The timing the rule chooses mattered less than probing at all.
+- What held up: probing before being stuck. Pooled over the 32 room games, C beat B in 25 (p = 0.001), C' in 22 (p = 0.025) and C'r in 19 (p = 0.19), and C' and C'r each beat B in 25 or more. The timing the rule chooses mattered less than probing at all.
 - Two trivial controls, R (repeat an action until the frame stops changing) and K (click every object once), completed no level in any synthetic game (320 runs). On the 10 held-out public games they completed 8 levels in 100 runs, all by K in one click game (vc33), while B and C completed 31 and 36 levels in 50 runs each.
 - Kaggle (ARC-AGI-3 public leaderboard): the submitted agent, C with rho = 3e-4 and q = 0.5, scores 0.37 (RHAE in percent).
 - On the 10 held-out public games, calibrated on the other 15 (rho = 3e-4, q = 0.5), C was no better than B or C' (mean RHAE 0.082% for B, 0.079% for C, 0.110% for C'). The agent completes under one level per game there, so H1 could not be tested.
 - C' could not spend its whole allotment, because the quota of a level it never reached lapsed and, in mazes, little was left unknown: it used 61% in rooms, 31% in mazes and 30% on real games. C'r, which splits the same allotment over the levels C reached, used 86% in rooms (Appendix E).
-- The reach discount q did not help: C1 (q = 1) had a higher mean RHAE than C in both suites, the replication and on real games, and so did CQ, C with q re-estimated from its own completion rate (Appendix E).
+- The reach discount q did not help: C1 (q = 1) had a higher mean RHAE than C in both suites, the replication and on real games, and in rooms so did CQ, C with q re-estimated from its own completion rate (Appendix E).
 - Two thirds of C's room gain over B came in levels 1 and 2 (47% in the replication), and with rho at the top of its grid the rule held within six actions in most room levels, so the rooms test early probing more than the rule's exact threshold (Appendix H).
 - Exploratory follow-ups: in rooms, most of C's gain came from learning its four moves early rather than from the designed switch (step-log replays). An ablation that gives every agent its moves and removes the door before level 3 isolates the switch: C beat B on levels 3 to 6 in 12 of 14 untied games, but level-1 probe costs offset this in total RHAE (C above B in 9 of 16).
 
