@@ -2,12 +2,15 @@
 
   q    per-difficulty reach probability from B runs: levels completed /
        levels attempted (an unfinished game counts the level it stopped in)
+  qc   the same from C runs at one rho, i.e. under the probing policy
+       (exploratory, 2026-10-14)
   rho  pick rho for C from a sweep: highest mean RHAE, ties broken by more
        levels completed, then by the smaller rho
 
 usage:
   python scripts/calibrate.py q   runs/<calib_B>/results.jsonl  > q.json
   python scripts/calibrate.py rho runs/<calib_C>/results.jsonl
+  python scripts/calibrate.py qc  runs/<calib_C>/results.jsonl 0.01 > q_c.json
 """
 from __future__ import annotations
 
@@ -30,11 +33,11 @@ def difficulty(r: dict) -> str:
     return tags[0] if tags else "all"
 
 
-def estimate_q(rows: list[dict]) -> dict:
+def estimate_q(rows: list[dict], label: str = "B", rho: float | None = None) -> dict:
     done: dict[str, int] = defaultdict(int)
     tried: dict[str, int] = defaultdict(int)
     for r in rows:
-        if r["label"] != "B":
+        if r["label"] != label or (rho is not None and abs(float(r["rho"]) - rho) > 1e-12):
             continue
         d = difficulty(r)
         done[d] += r["levels_completed"]
@@ -64,5 +67,7 @@ if __name__ == "__main__":
         print(json.dumps(estimate_q(rows)))
     elif what == "rho":
         pick_rho(rows)
+    elif what == "qc":
+        print(json.dumps(estimate_q(rows, "C", float(sys.argv[3]))))
     else:
         raise SystemExit("first argument: q or rho")

@@ -14,3 +14,4 @@ runs/*/logs/
 __pycache__/
 *.pyc
 .DS_Store
+/vendor

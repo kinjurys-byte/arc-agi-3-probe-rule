@@ -12,6 +12,9 @@ Configurations (environment variable ARC_AGENT_CONFIG, default "C"):
        with quota a level could not use carried forward (aliases: "C'", "CP");
        the budget comes from ARC_PROBE_BUDGETS or ARC_PROBE_BUDGET, otherwise
        ARC_UNIFORM_PROBES per level
+  CR   control C'r (exploratory, 2026-10-14): CU, but the budget is split
+       over the levels C reached in the same game and seed (ARC_PROBE_LEVELS)
+       instead of all levels, so quota of levels C never reached is not lost
   R    trivial control: hold one action until it leaves the frame unchanged
        twice in a row, then move to the next in a fixed cycle (ACTION1-5,
        then a click on the most salient object); no search, table or probes
@@ -36,6 +39,7 @@ Optional environment variables:
   ARC_PROBE_BUDGETS   JSON file {"<game>:<seed>" or "<game>": probes} for CU
   ARC_PROBE_BUDGET    total probes per game for CU (overrides the file)
   ARC_UNIFORM_PROBES  per-level quota for CU when no budget is known (default 6)
+  ARC_PROBE_LEVELS    CR only: number of levels the budget is split over
   ARC_LOG_DIR         if set, write per-step JSONL logs and summary.jsonl here
   ARC_LOG_STEPS       "0" keeps summary.jsonl but skips the per-step logs
   ARC_HUD_THRESH      share of transitions a counter line must change in (default 0.75)
@@ -90,6 +94,8 @@ CONFIG_ALIASES = {
     "CP": "CU",
     "C_PRIME": "CU",
     "UNIFORM": "CU",
+    "CR": "CR",
+    "C'R": "CR",
     "R": "R",
     "REPEAT": "R",
     "K": "K",
@@ -628,6 +634,7 @@ class MyAgent(Agent):
         self.rng = random.Random(zlib.crc32(f"{self.game_key}|{self.seed}".encode()))
         self.probe_budget = self._load_probe_budget()
         self.uniform_quota = _env_int("ARC_UNIFORM_PROBES", 6)
+        self.probe_levels = _env_int("ARC_PROBE_LEVELS", 0)   # CR only; 0 = all levels
 
         # world model
         self.hud: Optional[_Hud] = None
@@ -1127,7 +1134,7 @@ class MyAgent(Agent):
             left /= self.rstar ** 2
             right = j / (max(1, self.a_level) * self.rhat ** 2)
             return left > right
-        if self.config == "CU":
+        if self.config in ("CU", "CR"):
             # even split of the budget; quota a level could not use carries forward
             return self.probes_total < sum(self._quota(i) for i in range(1, j + 1))
         return False
@@ -1136,6 +1143,8 @@ class MyAgent(Agent):
         if self.probe_budget is None:
             return self.uniform_quota
         levels = max(1, self.win_levels)
+        if self.config == "CR" and self.probe_levels > 0:
+            levels = max(1, min(levels, self.probe_levels))
         base, extra = divmod(self.probe_budget, levels)
         return base + (1 if j - 1 < extra else 0)
 
@@ -1155,7 +1164,7 @@ class MyAgent(Agent):
         # Probing is a discretionary decision: without it (A, B, or when the
         # rule says no) actions of unknown effect are tried only once nothing
         # known to work is left to try anywhere in the level graph.
-        probe = self.config in ("C", "CU") and self._probe_ok()
+        probe = self.config in ("C", "CU", "CR") and self._probe_ok()
         # Click priority threshold for the whole level graph: lower-priority
         # clicks are considered only once nothing at the current threshold is
         # left untried anywhere reachable. The threshold is raised only when
@@ -1348,7 +1357,7 @@ class MyAgent(Agent):
     # ------------------------------------------------------------ logging
 
     def _load_probe_budget(self) -> Optional[int]:
-        if self.config != "CU":
+        if self.config not in ("CU", "CR"):
             return None
         if os.getenv("ARC_PROBE_BUDGET"):
             return max(0, _env_int("ARC_PROBE_BUDGET", 0))

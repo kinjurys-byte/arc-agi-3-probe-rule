@@ -1,6 +1,7 @@
 """Figures 2 and 3 for the paper (achromatic). Writes PNG (200 dpi) and SVG next to this script.
 
-Figure 3 reads runs/syn_rooms_confirm, runs/syn_rooms_ablation and
+Figure 2 reads the human baselines of the 25 public games stored in runs/real_calib and
+runs/real_heldout. Figure 3 reads runs/syn_rooms_confirm, runs/syn_rooms_ablation and
 runs/syn_r2_mazes_confirm. usage: python figs/make_charts.py
 """
 import json
@@ -33,49 +34,66 @@ plt.rcParams.update({
     "xtick.major.size": 0,
     "ytick.major.size": 0,
     "svg.fonttype": "none",
+    "svg.hashsalt": "pay-for-information-early",   # stable element ids, so the SVGs regenerate identically
 })
 
 
 def save(fig, name):
     fig.savefig(OUT / f"{name}.png", dpi=200, facecolor="white")
-    fig.savefig(OUT / f"{name}.svg", facecolor="white")
+    fig.savefig(OUT / f"{name}.svg", facecolor="white", metadata={"Date": None})
     plt.close(fig)
 
 
 # ---------------------------------------------------------------- Figure 2
-def figure2():
-    levels = list(range(1, 9))
-    ratio = [5.0 - 0.5 * (i - 1) for i in levels]          # agent / human actions
-    equal = [125.0 * i / r ** 3 for i, r in zip(levels, ratio)]     # level 1 = 1
-    grow = [125.0 / r ** 3 for r in ratio]
+def public_baselines():
+    """Per-level human baselines of the 25 public games, as stored with every real-game run."""
+    seen = {}
+    for name in ("real_calib", "real_heldout"):
+        for line in open(RUNS / name / "results.jsonl"):
+            r = json.loads(line)
+            if r.get("baseline"):
+                seen.setdefault(r["game"], r["baseline"])
+    return seen
+
+
+def figure2(min_games=5):
+    """Value of one saved action, and of a saved share of a level, relative to level 1.
+    From the score, saving one action in level i is worth (i/W) 2 h_i^2 / a_i^3 and saving a
+    share s of it (s a_i actions) is worth (i/W) 2 s / r_i^2, with r_i = a_i / h_i. For an agent
+    equally slow in every level (r_i = r) these are i h_1 / h_i and i times their level-1 value."""
+    from statistics import median, quantiles
+    base = public_baselines()
+    top = max(len(h) for h in base.values())
+    levels, med, lo, hi, n = [], [], [], [], []
+    for i in range(1, top + 1):
+        vals = [i * h[0] / h[i - 1] for h in base.values() if len(h) >= i]
+        if len(vals) < min_games:
+            break
+        q1, _, q3 = quantiles(vals, n=4, method="inclusive")
+        levels.append(i); med.append(median(vals)); lo.append(q1); hi.append(q3); n.append(len(vals))
     fig, ax = plt.subplots(figsize=(6.4, 3.8))
-    ax.set_yscale("log")
-    ax.plot(levels, equal, color=INK, lw=2, marker="o", ms=6.5, mec="white", mew=1.5,
-            label="Equal human baselines", zorder=3, solid_capstyle="round")
-    ax.plot(levels, grow, color=MID, lw=2, marker="s", ms=6, mec="white", mew=1.5,
-            label="Human baselines proportional to the level index", zorder=3, solid_capstyle="round")
-    ax.annotate(f"{equal[-1]:.0f}\u00d7", (8, equal[-1]), xytext=(8, 0), textcoords="offset points",
-                va="center", ha="left", color=INK, fontsize=10, fontweight="semibold")
-    ax.annotate(f"{grow[-1]:.0f}\u00d7", (8, grow[-1]), xytext=(8, 0), textcoords="offset points",
-                va="center", ha="left", color=INK2, fontsize=10, fontweight="semibold")
-    ax.yaxis.set_major_locator(FixedLocator([1, 3, 10, 30, 100, 300]))
-    ax.yaxis.set_minor_locator(NullLocator())
-    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}"))
-    ax.set_ylim(0.8, 450)
-    ax.set_xlim(0.6, 8.9)
+    ax.fill_between(levels, lo, hi, color="#e6e6e6", lw=0, zorder=1)
+    ax.plot(levels, levels, color=MID, lw=2, ls=(0, (5, 3)), marker="s", ms=6, mec="white", mew=1.5,
+            label="Saving a fixed share of the level", zorder=3)
+    ax.plot(levels, med, color=INK, lw=2, marker="o", ms=6.5, mec="white", mew=1.5,
+            label="Saving one action (median; band: middle half of games)", zorder=4,
+            solid_capstyle="round")
     ax.set_xticks(levels)
-    ax.set_xlabel("Level")
-    ax.set_ylabel("Cost of one action (level 1 = 1)")
+    ax.set_xticklabels([f"{i}\n{k}" for i, k in zip(levels, n)])
+    ax.set_xlim(0.6, levels[-1] + 0.4)
+    ax.set_ylim(0, levels[-1] + 1)
+    ax.set_xlabel("Level (with the number of public games that have it)")
+    ax.set_ylabel("Value relative to level 1")
     ax.grid(axis="y", color=GRID, lw=0.8)
     ax.set_axisbelow(True)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-    leg = ax.legend(loc="upper left", frameon=False, fontsize=9, labelcolor=INK)
+    for s_ in ("top", "right", "left"):
+        ax.spines[s_].set_visible(False)
+    leg = ax.legend(loc="upper left", frameon=False, fontsize=9)
     for t in leg.get_texts():
         t.set_color(INK)
     fig.tight_layout()
     save(fig, "figure2_marginal_cost")
-    return equal, grow
+    return levels, med, lo, hi, n
 
 
 # ---------------------------------------------------------------- Figure 3
@@ -161,8 +179,10 @@ def figure3():
 
 
 if __name__ == "__main__":
-    e, g = figure2()
-    print("figure 2 level 8:", round(e[-1], 1), round(g[-1], 1))
+    lv, med, lo, hi, n = figure2()
+    print("figure 2: level, games, median, quartiles")
+    for row in zip(lv, n, med, lo, hi):
+        print("  ", row[0], row[1], round(row[2], 2), round(row[3], 2), round(row[4], 2))
     data = figure3()
     for title, res in data.items():
         print(title.replace("\n", " "))

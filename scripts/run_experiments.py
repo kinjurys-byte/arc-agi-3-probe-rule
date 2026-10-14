@@ -11,6 +11,8 @@ Configs
   C1   C with q = 1 (the original, undiscounted rule)
   CU   control C': as many probes as C (same game, seed, rho), split evenly
        over levels; C runs first
+  CR   control C'r (exploratory): as CU, but split evenly over the levels C
+       reached in the same game and seed; C runs first
 
 Examples
   .venv/bin/python scripts/run_experiments.py --games ls20 --configs C --seeds 0
@@ -104,7 +106,7 @@ def run_one(job: dict) -> dict:
     os.environ["ARC_AGENT_CONFIG"] = "C" if job["label"] == "C1" else job["label"]
     os.environ["ARC_SEED"] = str(job["seed"])
     os.environ["ARC_LOG_DIR"] = job["log_dir"]
-    for k in ("ARC_RHO", "ARC_Q", "ARC_PROBE_BUDGET"):
+    for k in ("ARC_RHO", "ARC_Q", "ARC_PROBE_BUDGET", "ARC_PROBE_LEVELS"):
         os.environ.pop(k, None)               # worker processes are reused
     for k, v in job["env"].items():
         os.environ[k] = str(v)
@@ -225,10 +227,10 @@ def main() -> None:
     log_steps = "0" if args.no_step_logs else "1"
 
     def job(game: str, label: str, seed: int, rho: str | None,
-            budget: int | None = None) -> dict:
+            budget: int | None = None, reach: int | None = None) -> dict:
         env = {"ARC_LOG_STEPS": log_steps}
         tag = label
-        if label in ("C", "C1", "CU") and rho is not None:
+        if label in ("C", "C1", "CU", "CR") and rho is not None:
             env["ARC_RHO"] = rho
             tag = f"{label}_rho{rho}"
         if label == "C1":
@@ -239,6 +241,8 @@ def main() -> None:
                 env["ARC_Q"] = q
         if budget is not None:
             env["ARC_PROBE_BUDGET"] = str(budget)
+        if reach is not None:
+            env["ARC_PROBE_LEVELS"] = str(reach)
         return {"game": game, "label": label, "seed": seed, "env": env, "env_dir": str(env_dir),
                 "max_steps": args.max_steps, "log_dir": str(out / "logs" / tag),
                 "tags": tags_of(game), "baseline": cached[game].get("baseline_actions")}
@@ -276,30 +280,40 @@ def main() -> None:
         args.q = str(round(done / tried, 4) if tried else 1.0)
         print(f"q (auto, from B) = {args.q}: {done} levels completed of {tried} attempted", flush=True)
         (out / "q_auto.json").write_text(json.dumps({"q": float(args.q), "completed": done, "attempted": tried}))
-        first_labels = [c for c in labels if c not in ("A", "B", "CU")]
+        first_labels = [c for c in labels if c not in ("A", "B", "CU", "CR")]
     else:
-        first_labels = [c for c in labels if c != "CU"]
+        first_labels = [c for c in labels if c not in ("CU", "CR")]
     first = []
     for label in first_labels:
         for rho in (rhos if label in ("C", "C1") else [None]):
             first += [job(g, label, s, rho) for g in games for s in seeds]
     run_batch(first)
-    if "CU" in labels:
+    for control in ("CU", "CR"):
+        if control not in labels:
+            continue
         for rho in rhos:
             want = None if rho is None else float(rho)
-            probes = {(r["game"], r["seed"]): r["probes"] for r in rows
+            c_rows = {(r["game"], r["seed"]): r for r in rows
                       if r.get("label") == "C" and "error" not in r
                       and (want is None or abs(r["rho"] - want) < 1e-12)}
-            if not probes:
-                print("CU needs C runs for the same games, seeds and rho; using ARC_UNIFORM_PROBES")
-            run_batch([job(g, "CU", s, rho, probes.get((g, s))) for g in games for s in seeds])
+            if not c_rows:
+                print(f"{control} needs C runs for the same games, seeds and rho; using ARC_UNIFORM_PROBES")
+
+            def reach(r: dict | None) -> int | None:
+                # levels C played: those it completed plus the one it stopped in
+                if r is None or control != "CR":
+                    return None
+                return min(r["win_levels"], r["levels_completed"] + (0 if r["state"] == "WIN" else 1))
+
+            run_batch([job(g, control, s, rho, (c_rows.get((g, s)) or {}).get("probes"),
+                           reach(c_rows.get((g, s)))) for g in games for s in seeds])
 
     print("\nmean RHAE (percent) by config")
     groups: dict[tuple, list[dict]] = {}
     for r in rows:
         if "error" in r:
             continue
-        key = (r["label"], r["rho"] if r["label"] in ("C", "C1", "CU") else None)
+        key = (r["label"], r["rho"] if r["label"] in ("C", "C1", "CU", "CR") else None)
         groups.setdefault(key, []).append(r)
     for (c, rho), rs in sorted(groups.items(), key=lambda kv: (kv[0][0], kv[0][1] or 0)):
         vals = [r["score_rhae"] or 0.0 for r in rs]
