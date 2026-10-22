@@ -1,0 +1,31 @@
+1. B's level-1 action ratio against the change in mean RHAE (points)
+   CA: 17 games, Spearman +0.512, one-sided permutation p = 0.0193
+   C: 17 games, Spearman +0.021, one-sided permutation p = 0.4605
+
+2. games B clears within five times the human actions in level 1
+   g50t: B ratio 2.0 (h = 78), RHAE change CA -0.02, C +0.02; level-1 probes per run C 1.5, CA 6.5; median level-1 actions B 157, C 196, CA 320
+   lp85: B ratio 0.5 (h = 17), RHAE change CA -1.77, C +0.35; level-1 probes per run C 0.0, CA 29.0; median level-1 actions B 8, C 8, CA 34
+   r11l: B ratio 2.7 (h = 22), RHAE change CA -0.65, C +0.00; level-1 probes per run C 0.0, CA 107.5; median level-1 actions B 59, C 59, CA 988
+   vc33: B ratio 3.6 (h = 7), RHAE change CA -0.43, C -0.01; level-1 probes per run C 0.0, CA 20.0; median level-1 actions B 25, C 25, CA 30
+   other 13 games: CA above B in 6, below in 7
+
+3. probes as a share of actions
+   open rooms: C 1.0%, CA 1.1%
+   new rooms: C 1.1%, CA 1.2%
+   mazes: C 0.6%, CA 1.4%
+   cluttered rooms: C 0.6%, CA 0.9%
+   real games: C 4.3%, CA 6.4%
+
+4. levels B completed within 3 times the human actions
+   open rooms: 0 of 199 completed levels (0%), earning 0% of B's score
+   new rooms: 2 of 206 completed levels (1%), earning 43% of B's score
+   mazes: 0 of 247 completed levels (0%), earning 0% of B's score
+   cluttered rooms: 23 of 896 completed levels (3%), earning 50% of B's score
+   real games: 72 of 425 completed levels (17%), earning 88% of B's score
+   real game-levels with B's median ratio within 3: g50t level 1, lp85 level 1, r11l level 1, sc25 level 2
+   C against B, summed over games (points of game RHAE): there -0.64, elsewhere +0.45
+   CA against B, summed over games (points of game RHAE): there -5.29, elsewhere +0.90
+     g50t level 1: B 0.044, C 0.064, CA 0.021
+     lp85 level 1: B 3.090, C 3.090, CA 0.694
+     r11l level 1: B 0.651, C 0.651, CA 0.002
+     sc25 level 2: B 2.392, C 1.728, CA 0.169

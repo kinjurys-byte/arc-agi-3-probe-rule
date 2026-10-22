@@ -1,0 +1,48 @@
+25 games, seeds per game and configuration: [20]
+config  runs  levels completed (total, per run)  mean RHAE %
+  B      500     425  0.850            0.4005
+  C      500     448  0.896            0.3925
+  CA     500     449  0.898            0.2250
+
+registered tests (all games)
+  R1: CA above B on levels in 6, below in 2, tied 17; one-sided p = 0.1445 -> FAIL
+  R2: C above B on levels in 7, below in 2, tied 16; one-sided p = 0.0898 -> FAIL
+  R3: CA above B on RHAE in 6, below in 11, tied 8; one-sided p = 0.9283 -> FAIL
+  R4: C above B on RHAE in 9, below in 7, tied 9; one-sided p = 0.4018 -> FAIL
+  R5: game-seed pairs where CA completed more / fewer levels than B: 48 / 27 of 500; one-sided p = 0.0101 -> PASS
+  R6: game-seed pairs where C completed more / fewer levels than B: 36 / 15 of 500; one-sided p = 0.0023 -> PASS
+
+descriptive
+  C vs CA on levels: above 3, below 3, tied 19, p = 0.6562
+  C vs CA on RHAE: above 12, below 6, tied 7, p = 0.1189
+  held-out games (10): R1 4:1 (tied 5)  R2 4:1 (tied 5)  R3 4:4 (tied 2)  R4 4:4 (tied 2)
+  design games (15): R1 2:1 (tied 12)  R2 3:1 (tied 11)  R3 2:7 (tied 6)  R4 5:3 (tied 7)
+  game-seed pairs where C completed more / fewer levels than CA: 32 / 42 of 500
+
+per game: levels B, C, CA | RHAE B, C, CA
+  ar25*  0.95 1.25 0.50 |  0.043  0.102  0.018
+  bp35*  0.20 0.10 1.00 |  0.000  0.000  0.059
+  cd82*  0.95 1.20 1.25 |  0.065  0.054  0.111
+  cn04   0.05 0.25 0.25 |  0.000  0.002  0.001
+  dc22*  1.00 1.00 1.00 |  0.013  0.012  0.013
+  ft09*  0.00 0.00 0.00 |  0.000  0.000  0.000
+  g50t*  0.05 0.10 0.10 |  0.044  0.064  0.021
+  ka59   0.00 0.00 0.00 |  0.000  0.000  0.000
+  lf52*  1.00 1.00 1.00 |  0.022  0.033  0.055
+  lp85   3.15 3.25 3.00 |  4.977  5.326  3.207
+  ls20   1.00 1.00 1.00 |  0.109  0.112  0.025
+  m0r0*  0.65 1.00 1.00 |  0.253  0.265  0.319
+  r11l   1.00 1.00 1.00 |  0.651  0.651  0.002
+  re86   0.00 0.00 0.00 |  0.000  0.000  0.000
+  s5i5   1.00 1.00 1.00 |  0.024  0.022  0.009
+  sb26   0.00 0.00 0.00 |  0.000  0.000  0.000
+  sc25   2.25 2.20 2.35 |  2.768  2.081  0.475
+  sk48   0.00 0.00 0.00 |  0.000  0.000  0.000
+  sp80   1.00 1.00 1.00 |  0.010  0.067  0.724
+  su15   1.00 1.00 1.00 |  0.008  0.007  0.002
+  tn36   0.00 0.05 0.00 |  0.000  0.005  0.000
+  tr87*  0.00 0.00 0.00 |  0.000  0.000  0.000
+  tu93   4.00 4.00 4.00 |  0.055  0.055  0.051
+  vc33*  2.00 2.00 2.00 |  0.968  0.956  0.534
+  wa30   0.00 0.00 0.00 |  0.000  0.000  0.000
+  (* held-out game)

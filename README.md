@@ -22,6 +22,8 @@ rho * sum_{i>j} i * q^(i-j) / r_*^2  >  j / (a_hat_j * r_hat_j^2)
 
 ## Results
 
+### Synthetic suites
+
 Second pre-registered round, its registered replication on 16 new room games (seeds 30 to 34), and the registered cluttered-room suite: 48 games, 12 base rooms of 16x16 at 0, 20, 40 and 60% clutter (seeds 40 to 44). The other suites have 16 evaluation games; every game runs five seeds. Game counts exclude ties, except H5.
 
 | Test (criterion) | Open rooms | New rooms (replication) | Mazes | Cluttered rooms |
@@ -42,16 +44,34 @@ Second pre-registered round, its registered replication on 16 new room games (se
 
 - Predictions were recorded before the runs. Round 2: everything passes in rooms; H2, H4 and H6 fail in mazes. Eight of the ten held: H4 failed in rooms, because early information also made later levels reachable, and H5 was not met in mazes. Replication (docs/registration_replication.md, committed before its games were generated): H1, H2 and H6 pass, H4 fails, no prediction for H5, C does not meet the criterion against C'r, and CQ's mean is at least C's. Five of the six held; H2 did not replicate. Cluttered rooms (docs/registration_clutter.md, committed before its evaluation games were generated): K1, K2, H1, H4 and H6 pass and K3 is negative; all six held. H3 (choosing probe targets by information gain) was not run.
 - Why: B tries actions of unknown effect only when stuck. In mazes it is stuck often enough to learn the switch in level 1 (76 of 80 runs), in open rooms never (0 of 80; scripts/diagnose_free_learning.py on step logs). Clutter turns one into the other: B learned the switch in level 1 in 0, 33, 50 and 67% of runs as clutter rose, and C beat B in 11, 11, 10 and 6 of 12 base rooms. B itself scored higher with more clutter, so it is C's relative gain, the registered measure, that fell; the absolute gain did not.
-- What held up: probing before being stuck, not the rule's timing. Pooled over the 32 room games, C beat B in 25 (p = 0.001), but so did C' (25), C'r (27) and always probing, CA (28); C was above CA in 14 and below in 14. In cluttered rooms CA was above C in 30 of 48 games.
+- What held up in the synthetic suites: probing before being stuck, not the rule's timing. Pooled over the 32 room games, C beat B in 25 (p = 0.001), but so did C' (25), C'r (27) and always probing, CA (28); C was above CA in 14 and below in 14. In cluttered rooms CA was above C in 30 of 48 games. On real games the rule's restraint mattered (below).
 - Two trivial controls, R (repeat an action until the frame stops changing) and K (click every object once), completed no level in any synthetic game (320 runs). On the 10 held-out public games they completed 8 levels in 100 runs, all by K in one click game (vc33), while B and C completed 31 and 36 levels in 50 runs each.
-- Kaggle (ARC-AGI-3 public leaderboard): the submitted agent, C with rho = 3e-4 and q = 0.5, scores 0.37 (RHAE in percent).
-- On the 10 held-out public games, calibrated on the other 15 (rho = 3e-4, q = 0.5), C was no better than B, C' or CA (mean RHAE 0.082% for B, 0.079% for C, 0.110% for C', 0.115% for CA). The agent completes under one level per game there, so H1 could not be tested. Rerun at seeds 10 to 14 with step logs (identical rows), B learned in level 1 79% of the action types C found useful there (70% on the design games); the rest could pay mainly in later levels, which C reached in 60% of the held-out runs.
 - C' could not spend its whole allotment, because the quota of a level it never reached lapsed and, in mazes, little was left unknown: it used 61% in rooms, 31% in mazes and 30% on real games. C'r, which splits the same allotment over the levels C reached, used 86% in rooms (Appendix E).
 - The reach discount q did not help: C1 (q = 1) had a higher mean RHAE than C in every suite and on real games, and in rooms so did CQ, C with q re-estimated from its own completion rate (Appendix E).
 - Two thirds of C's room gain over B came in levels 1 and 2 (47% in the replication), and with rho at the top of its grid the rule held within six actions in most room levels, so the rooms test early probing more than the rule's exact threshold (Appendix H, figs/figureA1_where_gains_come_from.png).
 - Exploratory follow-ups: in rooms, most of C's gain came from learning its four moves early rather than from the designed switch (step-log replays). An ablation that gives every agent its moves and removes the door before level 3 isolates the switch: C beat B on levels 3 to 6 in 12 of 14 untied games, but level-1 probe costs offset this in total RHAE (C above B in 9 of 16).
 
 The first round (mazes only) failed H2 and H4 because of two bugs: the click-priority threshold rose to its maximum at the first action of every game, and floor and wall pieces got a new type key at every state, so most probes went to floor tiles. Its agent is kept in `archive/round1/` and its results in `runs/syn_r1_*`.
+
+### Real games
+
+Registered test on the 25 public ARC-AGI-3 games (`docs/registration_real.md`, committed before its runs): B, C (rho = 3e-4, q = 0.5) and CA, 20 new seeds (15 to 34) per game, compared game by game with one-sided sign tests, ties dropped. Four of the six predictions held.
+
+| Test (criterion) | Predicted | Result |
+| --- | --- | --- |
+| R1 levels: CA completes more than B (≥ 60% of untied games, p < 0.05; primary) | pass | 6 of 8, p = 0.14, fail |
+| R2 levels: C completes more than B (same; primary) | pass | 7 of 9, p = 0.090, fail |
+| R3 RHAE: CA above B (same) | fail | 6 of 17, p = 0.93, fail |
+| R4 RHAE: C above B (same) | fail | 9 of 16, p = 0.40, fail |
+| R5 levels, game-seed pairs: CA above B more often than below (p < 0.05) | pass | 48 vs 27, p = 0.010, pass |
+| R6 levels, game-seed pairs: C above B more often than below (p < 0.05) | pass | 36 vs 15, p = 0.002, pass |
+| Mean RHAE (%), B / C / CA | | 0.400 / 0.393 / 0.225 |
+| Levels completed per run, B / C / CA | | 0.850 / 0.896 / 0.898 |
+
+- Kaggle (ARC-AGI-3 public leaderboard): the submitted agent, C with rho = 3e-4 and q = 0.5, scores 0.37 (RHAE in percent; notebook version 2). The same agent with always probing, CA, as its default scores 0.26 (version 3, exploratory).
+- Probing raised the levels completed in more runs than it lowered them, but most games tied (no configuration cleared level 1, or all cleared the same levels), so the game-level tests R1 and R2 failed. C's mean RHAE matched B's; CA's was 44% lower.
+- Where always probing lost (exploratory; `scripts/analyze_where_probing_lost.py`): 17% of the real levels B completed took at most three times the human actions (0 to 3% in the synthetic suites), and they earned 88% of B's real-game score. One action in level j costs in proportion to j / (a_j r_j^2), so probes are dearest there. CA kept probing in those levels and lost 5.29 points of game RHAE there, summed over games (it gained 0.90 elsewhere). C, whose cost side stays high early in a level, made no level-1 probe in lp85, r11l and vc33 and lost 0.64 there (gaining 0.45 elsewhere), all of it in level 2 of sc25. In r11l, B and C cleared level 1 in a median 59 actions (human 22), CA in 988. Over the 17 games in which B cleared level 1, CA's change in RHAE rose with B's level-1 action ratio (Spearman +0.51, p = 0.019; C +0.02).
+- Earlier runs (exploratory, seeds 10 to 14): on the 10 held-out public games, calibrated on the other 15 (rho = 3e-4, q = 0.5), C was no better than B, C' or CA (mean RHAE 0.082% for B, 0.079% for C, 0.110% for C', 0.115% for CA). The agent completes under one level per game there, so H1 could not be tested. Rerun at seeds 10 to 14 with step logs (identical rows), B learned in level 1 79% of the action types C found useful there (70% on the design games); the rest could pay mainly in later levels, which C reached in 60% of the held-out runs.
 
 ## Layout
 
@@ -71,6 +91,7 @@ docs/appendix.md         technical appendix A to H (protocol, agent, rule, hyper
 docs/registration_ko.md  the pre-registration record (Korean, as written before the runs)
 docs/registration_replication.md  the replication's registration, committed before its games existed
 docs/registration_clutter.md      the cluttered-room suite's registration, committed before its evaluation games existed
+docs/registration_real.md         the real-game test's registration, committed before its runs
 archive/round1/          the round-1 agent and its q values
 splits.json              frozen design / held-out split of the 25 public games
 ```
@@ -204,13 +225,21 @@ $P scripts/diagnose_free_learning.py runs/real_diag_heldout runs/real_diag_desig
 $P scripts/run_experiments.py --split heldout --configs CA --seeds 10,11,12,13,14 --jobs 4 --no-step-logs --out runs/real_alwaysprobe_heldout
 ```
 
+Registered real-game test (`docs/registration_real.md`), then the exploratory follow-up:
+
+```
+$P scripts/run_experiments.py --configs B,C,CA --rho 0.0003 --q 0.5 --seeds 15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34 --jobs 4 --no-step-logs --out runs/real_seeds15_34
+$P scripts/analyze_real.py runs/real_seeds15_34/results.jsonl
+$P scripts/analyze_where_probing_lost.py
+```
+
 Figures: `python figs/make_charts.py` (figure 2 and appendix figure A1, matplotlib; figure 2 reads the public games' human baselines stored in `runs/real_calib` and `runs/real_heldout`), `python figs/make_clutter_figure.py` (figure 3, from `runs/syn_clutter_confirm` and `runs/syn_clutter_free_learning.json`), `python figs/make_figure1.py` (figure 1; the PNG needs Playwright) and `$P figs/make_replay_gif.py` (the replay GIF; it replays the two runs and checks their level-3 action counts against `runs/syn_rooms_confirm`). They use the Inter font when it is installed.
 
 Some result rows record a rho or q that their configuration does not use (A and B ignore both, C' ignores q). Those fields hold the agent's defaults at the time of the run (rho 0.02 and q 1.0 before the Kaggle defaults were set), so a rerun shows different values there; every other field reproduces exactly.
 
 ## Known issues
 
-- Level cap: when a level is completed with exactly its 1,500th action, the agent stops before it sees the level change. This happened in 2 of the 7,651 run rows stored in runs/ (rooms A r103 seed 23, round-1 mazes C1 w302 seed 12). It only lowers those scores and changes no reported conclusion. The code is left as run.
+- Level cap: when a level is completed with exactly its 1,500th action, the agent stops before it sees the level change. This happened in 2 of the 9,151 run rows stored in runs/ (rooms A r103 seed 23, round-1 mazes C1 w302 seed 12). It only lowers those scores and changes no reported conclusion. The code is left as run.
 - A move blocked by walls in its first four tries is classed as a no-op (k_simple = 4), so in corridors a direction can go unused for a while.
 
 ## License
