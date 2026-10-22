@@ -63,6 +63,17 @@ def level_scores(r: dict) -> dict[int, float]:
     return {i: total * v / sum(raw.values()) for i, v in raw.items()}
 
 
+def level_probes(r: dict, i: int) -> int:
+    """Probes the run made in level i. Rows list completed levels only, so the
+    probes of the level a run ended in are its total minus those listed."""
+    lv = [x for x in r["levels"] if x["level"] == i]
+    if lv:
+        return lv[0]["probes"]
+    if i == r["levels_completed"] + 1:
+        return r["probes"] - sum(x["probes"] for x in r["levels"])
+    return 0
+
+
 def ranks(v: list[float]) -> list[float]:
     order = sorted(range(len(v)), key=lambda i: v[i])
     out = [0.0] * len(v)
@@ -120,8 +131,8 @@ def main() -> None:
     print("\n2. games B clears within five times the human actions in level 1")
     fast = [g for g, x in zip(cleared, ratio) if x <= 5]
     for g in fast:
-        c_l1 = mean(r["levels"][0]["probes"] for r in by[(g, "C")] if r["levels"])
-        ca_l1 = mean(r["levels"][0]["probes"] for r in by[(g, "CA")] if r["levels"])
+        c_l1 = mean(level_probes(r, 1) for r in by[(g, "C")])
+        ca_l1 = mean(level_probes(r, 1) for r in by[(g, "CA")])
         acts = {c: median(r["levels"][0]["actions"] for r in by[(g, c)]
                           if r["levels"] and r["levels"][0]["completed"]) for c in ("B", "C", "CA")
                 if l1_ratios(g, c)}
@@ -182,6 +193,38 @@ def main() -> None:
     for g, i in fast_cells:
         print(f"     {g} level {i}: B {contrib[(g, i, 'B')]:.3f}, C {contrib[(g, i, 'C')]:.3f}, "
               f"CA {contrib[(g, i, 'CA')]:.3f}")
+
+    print(f"\n5. run by run: the same game, seed and level as each level B completed within {FAST:g} times")
+    print("   the human actions (points of game RHAE summed over games, i.e. summed over runs and divided by")
+    print("   the seeds per game; probes are per such level)")
+    for name, rs in suites.items():
+        runs = {(r["game"], r["seed"], r["label"]): r for r in rs}
+        seeds = len({r["seed"] for r in rs})
+        scores = {k: level_scores(v) for k, v in runs.items()}
+        per_level = defaultdict(lambda: defaultdict(float))
+        for (g, s, c), r in runs.items():
+            if c != "B":
+                continue
+            for x in r["levels"]:
+                i = x["level"]
+                if i not in scores[(g, s, "B")] or x["actions"] / r["baseline"][i - 1] > FAST:
+                    continue
+                cell = per_level[i]
+                cell["n"] += 1
+                for other in ("C", "CA"):
+                    if (g, s, other) not in runs:
+                        continue
+                    cell[other] += scores[(g, s, other)].get(i, 0.0) - scores[(g, s, "B")][i]
+                    cell[other + " probes"] += level_probes(runs[(g, s, other)], i)
+        if not per_level:
+            print(f"   {name}: none")
+            continue
+        tot = {c: sum(v[c] for v in per_level.values()) / seeds for c in ("C", "CA")}
+        print(f"   {name}: C {tot['C']:+.2f}, CA {tot['CA']:+.2f}")
+        for i in sorted(per_level):
+            v = per_level[i]
+            print(f"     level {i}: {int(v['n'])} levels; C {v['C'] / seeds:+.2f} ({v['C probes'] / v['n']:.2f} probes), "
+                  f"CA {v['CA'] / seeds:+.2f} ({v['CA probes'] / v['n']:.2f} probes)")
 
 
 if __name__ == "__main__":

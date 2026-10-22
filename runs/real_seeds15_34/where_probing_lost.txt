@@ -3,7 +3,7 @@
    C: 17 games, Spearman +0.021, one-sided permutation p = 0.4605
 
 2. games B clears within five times the human actions in level 1
-   g50t: B ratio 2.0 (h = 78), RHAE change CA -0.02, C +0.02; level-1 probes per run C 1.5, CA 6.5; median level-1 actions B 157, C 196, CA 320
+   g50t: B ratio 2.0 (h = 78), RHAE change CA -0.02, C +0.02; level-1 probes per run C 3.9, CA 7.8; median level-1 actions B 157, C 196, CA 320
    lp85: B ratio 0.5 (h = 17), RHAE change CA -1.77, C +0.35; level-1 probes per run C 0.0, CA 29.0; median level-1 actions B 8, C 8, CA 34
    r11l: B ratio 2.7 (h = 22), RHAE change CA -0.65, C +0.00; level-1 probes per run C 0.0, CA 107.5; median level-1 actions B 59, C 59, CA 988
    vc33: B ratio 3.6 (h = 7), RHAE change CA -0.43, C -0.01; level-1 probes per run C 0.0, CA 20.0; median level-1 actions B 25, C 25, CA 30
@@ -29,3 +29,21 @@
      lp85 level 1: B 3.090, C 3.090, CA 0.694
      r11l level 1: B 0.651, C 0.651, CA 0.002
      sc25 level 2: B 2.392, C 1.728, CA 0.169
+
+5. run by run: the same game, seed and level as each level B completed within 3 times
+   the human actions (points of game RHAE summed over games, i.e. summed over runs and divided by
+   the seeds per game; probes are per such level)
+   open rooms: none
+   new rooms: C -1.19, CA -1.06
+     level 2: 2 levels; C -1.19 (3.50 probes), CA -1.06 (6.50 probes)
+   mazes: none
+   cluttered rooms: C -8.63, CA -9.90
+     level 1: 4 levels; C +0.00 (0.00 probes), CA -0.43 (22.00 probes)
+     level 2: 12 levels; C -4.83 (1.00 probes), CA -4.10 (1.92 probes)
+     level 3: 1 levels; C -0.33 (0.00 probes), CA -0.51 (0.00 probes)
+     level 4: 3 levels; C -1.25 (0.00 probes), CA -0.67 (0.00 probes)
+     level 5: 3 levels; C -2.22 (0.00 probes), CA -4.19 (0.00 probes)
+   real games: C -0.77, CA -7.64
+     level 1: 45 levels; C +0.00 (0.00 probes), CA -3.29 (55.73 probes)
+     level 2: 23 levels; C -0.65 (0.26 probes), CA -2.96 (22.13 probes)
+     level 3: 4 levels; C -0.12 (0.00 probes), CA -1.39 (27.75 probes)
