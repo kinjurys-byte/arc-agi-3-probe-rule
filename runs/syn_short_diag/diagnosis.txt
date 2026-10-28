@@ -3,3 +3,9 @@ C: 60 runs; some move a no-op at the end of level 1 in 0, still a no-op at the e
 CA: 60 runs; some move a no-op at the end of level 1 in 45, still a no-op at the end of the run in 45
    levels completed: 1.80 with such a move, 6.00 without
    levels completed when a move stayed a no-op: 1.80
+
+C against CA, run by run, in the CA runs (points of game RHAE)
+  with a move a no-op at the end: 45 runs; C above CA in 44; mean margin 2.776 = level 1 2.059 + levels 2 to 6 0.718
+     CA below B in 42 of 45
+  without: 15 runs; C above CA in 12; mean margin 0.537 = level 1 1.449 + levels 2 to 6 -0.912
+     CA below B in 10 of 15

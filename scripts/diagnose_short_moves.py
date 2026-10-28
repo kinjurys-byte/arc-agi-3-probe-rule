@@ -10,7 +10,10 @@ next levels. This script reads the step logs of a rerun of d2 with step logs
 - runs in which some move (ACTION1-4) was classed as a no-op at the end of
   level 1, and in which some move was still a no-op when the run ended;
 - levels completed with and without such a move;
-- that the rerun's result rows equal the stored rows of runs/syn_short_confirm.
+- that the rerun's result rows equal the stored rows of runs/syn_short_confirm;
+- C against CA run by run (same game and seed) in the CA runs with and without
+  such a move, split into level 1's part of the score and the rest, and CA
+  against B in the same runs.
 
 usage: python scripts/diagnose_short_moves.py [runs/syn_short_diag] [runs/syn_short_confirm/results.jsonl]
 """
@@ -21,6 +24,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 from statistics import mean
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from analyze_short import level1_points  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 MOVES = ("a1", "a2", "a3", "a4")
@@ -72,6 +78,26 @@ def main(diag: Path, stored: Path) -> None:
                   + (f"{mean(r['levels_completed'] for r in without1):.2f} without" if without1 else "no run without"))
         if still:
             print(f"   levels completed when a move stayed a no-op: {mean(r['levels_completed'] for r in still):.2f}")
+
+    # C against CA (and CA against B) in the same game and seed, by whether CA kept a move as a no-op
+    groups = {"with a move a no-op at the end": [], "without": []}
+    for r, _, ne in by_cfg.get("CA", []):
+        groups["with a move a no-op at the end" if ne else "without"].append((r["game"], r["seed"]))
+    print("\nC against CA, run by run, in the CA runs (points of game RHAE)")
+    for name, keys in groups.items():
+        if not keys:
+            continue
+        c = [ref[(g, "C", s)] for g, s in keys]
+        a = [ref[(g, "CA", s)] for g, s in keys]
+        b = [ref.get((g, "B", s)) for g, s in keys]
+        tot = [(x["score_rhae"] or 0.0) - (y["score_rhae"] or 0.0) for x, y in zip(c, a)]
+        l1 = [level1_points(x) - level1_points(y) for x, y in zip(c, a)]
+        wins = sum(t > 0 for t in tot)
+        print(f"  {name}: {len(keys)} runs; C above CA in {wins}; mean margin {mean(tot):.3f} = "
+              f"level 1 {mean(l1):.3f} + levels 2 to 6 {mean(t - x for t, x in zip(tot, l1)):.3f}")
+        if all(b):
+            below = sum((y["score_rhae"] or 0.0) < (z["score_rhae"] or 0.0) for y, z in zip(a, b))
+            print(f"     CA below B in {below} of {len(keys)}")
 
 
 if __name__ == "__main__":
