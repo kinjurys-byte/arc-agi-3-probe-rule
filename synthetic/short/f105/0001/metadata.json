@@ -1,0 +1,20 @@
+{
+ "game_id": "f105-0001",
+ "title": "synthetic room n=16, level-1 pocket of radius 0 around the exit",
+ "class_name": "F105",
+ "baseline_actions": [
+  14,
+  12,
+  12,
+  16,
+  13,
+  13
+ ],
+ "tags": [
+  "synthetic",
+  "short",
+  "d1",
+  "calib"
+ ],
+ "first_dist": 0
+}
