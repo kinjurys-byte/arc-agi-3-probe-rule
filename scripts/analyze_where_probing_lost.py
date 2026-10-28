@@ -14,6 +14,10 @@
    that fast (B's median over seeds) and over the rest. Each run's exact score
    (scripts/run_experiments.py rhae) is split over its levels in proportion to
    i * min(1.15, (h/a)^2).
+5. Run by run: C and CA against B in the same game, seed and level as each
+   level B completed within three times the human actions, with probes per
+   such level, for every suite.
+6. Real games: section 5's totals for thresholds of 2, 3, 4 and 5 times.
 
 usage: python scripts/analyze_where_probing_lost.py
 """
@@ -225,6 +229,37 @@ def main() -> None:
             v = per_level[i]
             print(f"     level {i}: {int(v['n'])} levels; C {v['C'] / seeds:+.2f} ({v['C probes'] / v['n']:.2f} probes), "
                   f"CA {v['CA'] / seeds:+.2f} ({v['CA probes'] / v['n']:.2f} probes)")
+
+    print("\n6. real games, other thresholds for a fast level (run by run, as in 5)")
+    runs = {(r["game"], r["seed"], r["label"]): r for r in rows}
+    scores = {k: level_scores(v) for k, v in runs.items()}
+    for thr in (2, 3, 4, 5):
+        n = n_fast = n_l1 = 0
+        total = total_fast = d_c = d_ca = 0.0
+        p_c = p_ca = 0
+        for (g, s, c), r in runs.items():
+            if c != "B":
+                continue
+            for x in r["levels"]:
+                i = x["level"]
+                if i not in scores[(g, s, "B")]:
+                    continue
+                b = scores[(g, s, "B")][i]
+                n += 1
+                total += b
+                if x["actions"] / r["baseline"][i - 1] > thr:
+                    continue
+                n_fast += 1
+                total_fast += b
+                d_c += scores[(g, s, "C")].get(i, 0.0) - b
+                d_ca += scores[(g, s, "CA")].get(i, 0.0) - b
+                if i == 1:
+                    n_l1 += 1
+                    p_c += level_probes(runs[(g, s, "C")], 1)
+                    p_ca += level_probes(runs[(g, s, "CA")], 1)
+        print(f"   within {thr} times: {n_fast} of {n} levels ({100 * n_fast / n:.0f}%), {100 * total_fast / total:.0f}% "
+              f"of B's score; C {d_c / 20:+.2f}, CA {d_ca / 20:+.2f}; probes per such level 1 (n = {n_l1}): "
+              f"C {p_c / max(n_l1, 1):.1f}, CA {p_ca / max(n_l1, 1):.1f}")
 
 
 if __name__ == "__main__":

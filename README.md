@@ -127,13 +127,16 @@ python3.12 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 git clone https://github.com/arcprize/ARC-AGI-3-Agents vendor/ARC-AGI-3-Agents
 git -C vendor/ARC-AGI-3-Agents checkout 4743e7d0aaae0ded0d98a89a7e282e63564cd58b
+.venv/bin/python scripts/slim_template.py
 ```
 
-Runs are deterministic: the same game, configuration and seed give the same actions. Rerunning sample games from a clean copy of this repository reproduced the stored results.
+The last command replaces the template's `agents/__init__.py`, which imports LLM-backed example agents whose packages are not installed here, with a minimal one that registers only the template's random agent (the official Kaggle sample notebooks do the same at run time). Without it every run fails with `ModuleNotFoundError`. `scripts/run_experiments.py` records a failed run as an ERROR row and still exits 0, so check its summary. The PNG of figure 1 also needs Playwright, which is not in requirements.txt.
+
+Runs are deterministic: the same game, configuration and seed give the same actions. From a fresh clone set up as above (2026-10-28), 36 sampled evaluation rows (B, C and CA in rooms, mazes and cluttered rooms) and all 480 rows of `runs/syn_clutter_diag` reproduced exactly, apart from the timing field and the unused rho and q fields described below.
 
 ## Reproduce
 
-Synthetic suites (already included; regenerating gives the same games):
+Synthetic suites (already included; regenerating gives the same games, except that `synthetic/rooms` was generated before `make_rooms.py` gained `--door-from`, so its game files lack the `DOOR_FROM` constant, which defaults to 1 and leaves the games unchanged):
 
 ```
 P=.venv/bin/python
@@ -206,6 +209,8 @@ $P scripts/analyze_clutter.py runs/syn_clutter_confirm/results.jsonl runs/syn_cl
 $P scripts/diagnose_free_learning.py runs/syn_clutter_diag --out runs/syn_clutter_free_learning.json
 ```
 
+`analyze_clutter.py` and `diagnose_free_learning.py` read the step logs of the `syn_clutter_diag` run, which are not committed (`runs/*/logs/` is ignored), so rerun that command first. `runs/syn_clutter_confirm/analysis.txt` joins the outputs of `analyze_synthetic.py`, `analyze_clutter.py` and `analyze_extra.py A=R B=R C=R C1=R CU=R CR=R CA=R --pairs C-B,CA-B,C-CA,C-CR,CR-B,CU-B,C1-C`, with R = `runs/syn_clutter_confirm/results.jsonl`.
+
 `scripts/analyze_extra.py` compares any configurations from any result files game by game and pools files joined with `+`; `--same X,Y` checks that two sets of runs are identical (the C and C' runs of the robustness checks reproduce the stored round-2 runs).
 
 Mechanism (which information C bought early): rerun the confirmation command for B and C without `--no-step-logs`, then `$P scripts/analyze_mechanism.py runs/<dir>/results.jsonl`.
@@ -233,7 +238,7 @@ $P scripts/analyze_real.py runs/real_seeds15_34/results.jsonl
 $P scripts/analyze_where_probing_lost.py
 ```
 
-Figures: `python figs/make_charts.py` (figure 2 and appendix figure A1, matplotlib; figure 2 reads the public games' human baselines stored in `runs/real_calib` and `runs/real_heldout`), `python figs/make_clutter_figure.py` (figure 3, from `runs/syn_clutter_confirm` and `runs/syn_clutter_free_learning.json`), `python figs/make_figure1.py` (figure 1; the PNG needs Playwright) and `$P figs/make_replay_gif.py` (the replay GIF; it replays the two runs and checks their level-3 action counts against `runs/syn_rooms_confirm`). They use the Inter font when it is installed.
+Figures: `$P figs/make_charts.py` (figure 2 and appendix figure A1, matplotlib; figure 2 reads the public games' human baselines stored in `runs/real_calib` and `runs/real_heldout`), `$P figs/make_clutter_figure.py` (figure 3, from `runs/syn_clutter_confirm` and `runs/syn_clutter_free_learning.json`), `$P figs/make_figure1.py` (figure 1; the PNG needs Playwright) and `$P figs/make_replay_gif.py` (the replay GIF; it replays the two runs and checks their level-3 action counts against `runs/syn_rooms_confirm`). They use the Inter font when it is installed; with other font metrics figure 2 and figure A1 can shift by under a point, with the same data.
 
 Some result rows record a rho or q that their configuration does not use (A and B ignore both, C' ignores q). Those fields hold the agent's defaults at the time of the run (rho 0.02 and q 1.0 before the Kaggle defaults were set), so a rerun shows different values there; every other field reproduces exactly.
 

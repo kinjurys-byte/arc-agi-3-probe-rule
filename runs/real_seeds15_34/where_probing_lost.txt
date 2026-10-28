@@ -47,3 +47,9 @@
      level 1: 45 levels; C +0.00 (0.00 probes), CA -3.29 (55.73 probes)
      level 2: 23 levels; C -0.65 (0.26 probes), CA -2.96 (22.13 probes)
      level 3: 4 levels; C -0.12 (0.00 probes), CA -1.39 (27.75 probes)
+
+6. real games, other thresholds for a fast level (run by run, as in 5)
+   within 2 times: 34 of 425 levels (8%), 67% of B's score; C -0.55, CA -5.85; probes per such level 1 (n = 23): C 0.0, CA 42.7
+   within 3 times: 72 of 425 levels (17%), 88% of B's score; C -0.77, CA -7.64; probes per such level 1 (n = 45): C 0.0, CA 55.7
+   within 4 times: 102 of 425 levels (24%), 94% of B's score; C -0.74, CA -8.03; probes per such level 1 (n = 68): C 0.0, CA 64.2
+   within 5 times: 115 of 425 levels (27%), 95% of B's score; C -0.74, CA -8.12; probes per such level 1 (n = 80): C 0.0, CA 66.8
