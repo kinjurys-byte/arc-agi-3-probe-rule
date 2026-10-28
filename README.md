@@ -44,7 +44,8 @@ Second pre-registered round, its registered replication on 16 new room games (se
 
 - Predictions were recorded before the runs. Round 2: everything passes in rooms; H2, H4 and H6 fail in mazes. Eight of the ten held: H4 failed in rooms, because early information also made later levels reachable, and H5 was not met in mazes. Replication (docs/registration_replication.md, committed before its games were generated): H1, H2 and H6 pass, H4 fails, no prediction for H5, C does not meet the criterion against C'r, and CQ's mean is at least C's. Five of the six held; H2 did not replicate. Cluttered rooms (docs/registration_clutter.md, committed before its evaluation games were generated): K1, K2, H1, H4 and H6 pass and K3 is negative; all six held. H3 (choosing probe targets by information gain) was not run.
 - Why: B tries actions of unknown effect only when stuck. In mazes it is stuck often enough to learn the switch in level 1 (76 of 80 runs), in open rooms never (0 of 80; scripts/diagnose_free_learning.py on step logs). Clutter turns one into the other: B learned the switch in level 1 in 0, 33, 50 and 67% of runs as clutter rose, and C beat B in 11, 11, 10 and 6 of 12 base rooms. B itself scored higher with more clutter, so it is C's relative gain, the registered measure, that fell; the absolute gain did not.
-- What held up in the synthetic suites: probing before being stuck, not the rule's timing. Pooled over the 32 room games, C beat B in 25 (p = 0.001), but so did C' (25), C'r (27) and always probing, CA (28); C was above CA in 14 and below in 14. In cluttered rooms CA was above C in 30 of 48 games. On real games its restraint seemed to protect the levels the explorer clears fast (exploratory, below).
+- What held up in the synthetic suites: probing before being stuck, not the rule's timing. Pooled over the 32 room games, C beat B in 25 (p = 0.001), but so did C' (25), C'r (27) and always probing, CA (28); C was above CA in 14 and below in 14. In cluttered rooms CA was above C in 30 of 48 games. On real games its restraint seemed to protect the levels the explorer clears fast (exploratory, below), and with a short synthetic first level it did (registered, next item).
+- Short first levels (docs/registration_short.md, committed before its evaluation games were generated): 12 base rooms of 16x16, each with an open first level (d1) and with level 1 shrunk to a pocket around the exit (d2; levels 2 to 6 identical), seeds 60 to 64. All five predictions held. In d2, B and C cleared level 1 in a median 4 actions (human 2); CA spent a median 29 probes there and C none, and C beat CA in 11 of 12 games (p = 0.003) and B in 12 of 12. With the open first level C and CA tied (6 and 6), and C's margin over CA was larger in d2 in 11 of 12 base rooms. Mean RHAE (%), d1 / d2: B 0.198 / 2.106, C 0.854 / 2.765, CA 0.815 / 0.548. Level 1 gave 86% of C's margin over CA in d2 (on level 1 alone C was ahead in 12 of 12). CA also lost later levels, because probing the pocket's walls made it class moves as no-ops (45 of 60 runs; Known issues), but in the 15 runs without that error C still scored higher in 12.
 - Two trivial controls, R (repeat an action until the frame stops changing) and K (click every object once), completed no level in any synthetic game (320 runs). On the 10 held-out public games they completed 8 levels in 100 runs, all by K in one click game (vc33), while B and C completed 31 and 36 levels in 50 runs each.
 - C' could not spend its whole allotment, because the quota of a level it never reached lapsed and, in mazes, little was left unknown: it used 61% in rooms, 31% in mazes and 30% on real games. C'r, which splits the same allotment over the levels C reached, used 86% in rooms (Appendix E).
 - The reach discount q did not help: C1 (q = 1) had a higher mean RHAE than C in every suite and on real games, and in rooms so did CQ, C with q re-estimated from its own completion rate (Appendix E).
@@ -85,6 +86,7 @@ synthetic/               the generated suites, in the local ARC-AGI-3 game forma
   rooms_ablation/        rooms evaluation games without a door before level 3
   rooms_rep/             new room evaluation games 10-13 for the registered replication
   clutter/               16x16 rooms with 0, 20, 40 or 60% of the floor turned into wall; evaluation 30-41, calibration 05-07
+  short/                 16x16 rooms with an open first level or a pocket around the exit; evaluation 50-61, calibration 05-10
 runs/                    one results.jsonl per run (plus console.log where kept)
 figs/                    figures 1 to 3, the level-3 replay GIF and the scripts that draw them
 docs/appendix.md         technical appendix A to H (protocol, agent, rule, hyperparameters, suites, history)
@@ -92,6 +94,7 @@ docs/registration_ko.md  the pre-registration record (Korean, as written before 
 docs/registration_replication.md  the replication's registration, committed before its games existed
 docs/registration_clutter.md      the cluttered-room suite's registration, committed before its evaluation games existed
 docs/registration_real.md         the real-game test's registration, committed before its runs
+docs/registration_short.md        the short-level rooms' registration, committed before their evaluation games existed
 archive/round1/          the round-1 agent and its q values
 splits.json              frozen design / held-out split of the 25 public games
 ```
@@ -211,6 +214,21 @@ $P scripts/diagnose_free_learning.py runs/syn_clutter_diag --out runs/syn_clutte
 
 `analyze_clutter.py` and `diagnose_free_learning.py` read the step logs of the `syn_clutter_diag` run, which are not committed (`runs/*/logs/` is ignored), so rerun that command first. `runs/syn_clutter_confirm/analysis.txt` joins the outputs of `analyze_synthetic.py`, `analyze_clutter.py` and `analyze_extra.py A=R B=R C=R C1=R CU=R CR=R CA=R --pairs C-B,CA-B,C-CA,C-CR,CR-B,CU-B,C1-C`, with R = `runs/syn_clutter_confirm/results.jsonl`.
 
+Short first levels (`docs/registration_short.md`; calibration games and runs were made before the registration, evaluation games after it):
+
+```
+$P scripts/make_short.py --size 16 --first-dist 0,2 --calib 5,6,7,8,9,10 --out synthetic/short
+$P scripts/run_experiments.py --env-dir synthetic/short --tags short,calib --configs B --seeds 0,1,2 --jobs 2 --no-step-logs --out runs/syn_short_calibB
+$P scripts/calibrate.py q runs/syn_short_calibB/results.jsonl > runs/syn_short_q.json
+$P scripts/run_experiments.py --env-dir synthetic/short --tags short,calib --configs C --rho 0.0001,0.0003,0.001,0.003,0.01 --q runs/syn_short_q.json --seeds 0,1,2 --jobs 2 --no-step-logs --out runs/syn_short_calibC
+$P scripts/calibrate.py rho runs/syn_short_calibC/results.jsonl
+$P scripts/make_short.py --size 16 --first-dist 0,2 --eval 50,51,52,53,54,55,56,57,58,59,60,61 --out synthetic/short
+$P scripts/run_experiments.py --env-dir synthetic/short --tags short,eval --configs B,C,CA --rho 0.003 --q runs/syn_short_q.json --seeds 60,61,62,63,64 --jobs 2 --no-step-logs --out runs/syn_short_confirm
+$P scripts/analyze_short.py runs/syn_short_confirm/results.jsonl
+$P scripts/run_experiments.py --env-dir synthetic/short --tags short,eval,d2 --configs CA,C --rho 0.003 --q runs/syn_short_q.json --seeds 60,61,62,63,64 --jobs 2 --out runs/syn_short_diag
+$P scripts/diagnose_short_moves.py
+```
+
 `scripts/analyze_extra.py` compares any configurations from any result files game by game and pools files joined with `+`; `--same X,Y` checks that two sets of runs are identical (the C and C' runs of the robustness checks reproduce the stored round-2 runs).
 
 Mechanism (which information C bought early): rerun the confirmation command for B and C without `--no-step-logs`, then `$P scripts/analyze_mechanism.py runs/<dir>/results.jsonl`.
@@ -245,7 +263,7 @@ Some result rows record a rho or q that their configuration does not use (A and 
 ## Known issues
 
 - Level cap: when a level is completed with exactly its 1,500th action, the agent stops before it sees the level change. This happened in 2 of the 9,151 run rows stored in runs/ (rooms A r103 seed 23, round-1 mazes C1 w302 seed 12). It only lowers those scores and changes no reported conclusion. The code is left as run.
-- A move blocked by walls in its first four tries is classed as a no-op (k_simple = 4), so in corridors a direction can go unused for a while.
+- A move blocked by walls in its first four tries is classed as a no-op (k_simple = 4), so in corridors a direction can go unused for a while. In the short-level rooms this hit always probing: probing the pocket's walls in level 1 left a move classed as a no-op in 45 of 60 CA runs, and those runs ended after 1.80 levels on average (scripts/diagnose_short_moves.py).
 
 ## License
 

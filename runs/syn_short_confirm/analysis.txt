@@ -1,0 +1,25 @@
+24 games (12 in d1, 12 in d2), seeds per game and configuration: [5]
+
+registered tests
+  S1: d2, C above CA in 11, below in 1, tied 0; one-sided p = 0.0032 -> PASS
+  S2: base rooms where C - CA is larger in d2 than in d1: 11, smaller: 1, tied 0; one-sided p = 0.0032 -> PASS
+  S3: d2, level-1 probes of C: median 0.0, mean 0.0 over 60 runs
+  S3: d2, level-1 probes of CA: median 29.0, mean 28.7 over 60 runs
+  S3: PASS
+  S4: d1, C above CA in 6, below in 6, tied 0; one-sided p = 0.6128 -> FAIL
+  S5: d2, C above B in 12, below in 0, tied 0; one-sided p = 0.0002 -> PASS
+
+descriptive
+  arm config  runs  mean RHAE  levels/run  level-1 points  level-1 actions (median)  level-1 probes (mean)
+  d1  B       60      0.198        2.63           0.044                     411.0                    0.0
+  d1  C       60      0.854        6.00           0.093                     895.5                   24.4
+  d1  CA      60      0.815        6.00           0.104                     655.0                   25.7
+  d2  B       60      2.106        2.25           1.927                       4.0                    0.0
+  d2  C       60      2.765        6.00           1.927                       4.0                    0.0
+  d2  CA      60      0.548        2.85           0.020                      31.0                   28.7
+  d1: CA above B in 11, below in 1, tied 0 (p = 0.0032)
+  d1: C above B in 11, below in 1, tied 0 (p = 0.0032)
+  d1: C above CA in 6, below in 6, tied 0 (p = 0.6128)
+  d2: CA above B in 1, below in 11, tied 0 (p = 0.9998)
+  d2: C above B in 12, below in 0, tied 0 (p = 0.0002)
+  d2: C above CA in 11, below in 1, tied 0 (p = 0.0032)

@@ -1,0 +1,20 @@
+{
+ "game_id": "f256-0001",
+ "title": "synthetic room n=16, level-1 pocket of radius 2 around the exit",
+ "class_name": "F256",
+ "baseline_actions": [
+  2,
+  14,
+  14,
+  13,
+  14,
+  15
+ ],
+ "tags": [
+  "synthetic",
+  "short",
+  "d2",
+  "eval"
+ ],
+ "first_dist": 2
+}

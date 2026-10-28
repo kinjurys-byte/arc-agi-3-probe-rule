@@ -1,0 +1,20 @@
+{
+ "game_id": "f159-0001",
+ "title": "synthetic room n=16, level-1 pocket of radius 0 around the exit",
+ "class_name": "F159",
+ "baseline_actions": [
+  15,
+  13,
+  16,
+  13,
+  14,
+  14
+ ],
+ "tags": [
+  "synthetic",
+  "short",
+  "d1",
+  "eval"
+ ],
+ "first_dist": 0
+}

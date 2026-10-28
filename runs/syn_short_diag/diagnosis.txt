@@ -1,0 +1,5 @@
+rerun rows equal to the stored rows (all fields but timing): 120 of 120
+C: 60 runs; some move a no-op at the end of level 1 in 0, still a no-op at the end of the run in 0
+CA: 60 runs; some move a no-op at the end of level 1 in 45, still a no-op at the end of the run in 45
+   levels completed: 1.80 with such a move, 6.00 without
+   levels completed when a move stayed a no-op: 1.80

@@ -1,0 +1,20 @@
+{
+ "game_id": "f150-0001",
+ "title": "synthetic room n=16, level-1 pocket of radius 0 around the exit",
+ "class_name": "F150",
+ "baseline_actions": [
+  13,
+  11,
+  13,
+  14,
+  15,
+  16
+ ],
+ "tags": [
+  "synthetic",
+  "short",
+  "d1",
+  "eval"
+ ],
+ "first_dist": 0
+}
