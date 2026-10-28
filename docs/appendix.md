@@ -5,7 +5,7 @@ Appendix to *Pay for Information Early: a probe rule derived from the ARC-AGI-3 
 ## A. Interaction protocol notes
 
 - Frames are grids up to 64x64 with values 0-15, and one response can carry several frames when the game animates before settling ([game schema](https://docs.arcprize.org/game-schema)). The agent plans on the settled frame and keeps transient frames as evidence.
-- On GAME_OVER only RESET is accepted ([actions](https://docs.arcprize.org/actions.md)). RESET after at least one action restarts the current level, while RESET with no action since the last level transition restarts the whole game, so two consecutive RESETs are forbidden ([RESET](https://docs.arcprize.org/api-reference/commands/start-or-reset-game-instance.md)). Each in-play RESET is counted as one action, as in Tycho [3] and Rodionov [7].
+- On GAME_OVER only RESET is accepted ([actions](https://docs.arcprize.org/actions.md)). RESET after at least one action restarts the current level, while RESET with no action since the last level transition restarts the whole game, so two consecutive RESETs are forbidden ([RESET](https://docs.arcprize.org/api-reference/commands/start-or-reset-game-instance.md)). Each in-play RESET is counted as one action, as in Tycho [3] and Rodionov [8].
 - `available_actions` restricts the action set each turn, and ACTION6 availability does not reveal which coordinates are active ([actions](https://docs.arcprize.org/actions.md)). Coordinates are (x, y) with (0, 0) at the top left.
 - `win_levels` in each frame states the level threshold for a win, so the agent should know the number of levels L, and hence the level weights, in advance ([API reference](https://docs.arcprize.org/api-reference/commands/execute-simple-action-1.md)).
 - A free ARC API key unlocks all 25 public games ([available games](https://docs.arcprize.org/available-games.md)). After the first download, games are cached and local runs are offline ([starter kit](https://docs.arcprize.org/arc-prize-2026)).
@@ -14,7 +14,7 @@ Appendix to *Pay for Information Early: a probe rule derived from the ARC-AGI-3 
 ## B. Base agent
 
 - State graph: a node is the hash of the settled frame (status-bar lines blanked) plus the available actions; an edge is an (action, click target) transition. Untried actions at the current node come first; otherwise the agent follows the shortest known path to the nearest node with untried actions. RESET is a virtual edge back to the level start, used only when it is shorter by more than 10 actions, and never when no action has been taken since the level started, because that RESET restarts the whole game.
-- Click targets: 4-connected single-color components of unmasked cells, at most 48 per state, one click per component. Five priority tiers after [10], with our own rules: 0, a compact component (fill at least 0.5) of a rare color (at most 34% of the foreground area); 1, any other non-background component; 2, components of 2 pixels or fewer; 3, non-background components larger than 1/8 of the frame, and background pockets; 4, large background regions. A level-wide threshold admits a lower tier only when nothing at the current threshold is left to try anywhere reachable, and only if raising it finds something.
+- Click targets: 4-connected single-color components of unmasked cells, at most 48 per state, one click per component. Five priority tiers after [11], with our own rules: 0, a compact component (fill at least 0.5) of a rare color (at most 34% of the foreground area); 1, any other non-background component; 2, components of 2 pixels or fewer; 3, non-background components larger than 1/8 of the frame, and background pockets; 4, large background regions. A level-wide threshold admits a lower tier only when nothing at the current threshold is left to try anywhere reachable, and only if raising it finds something.
 - Status bars: border lines leave the state identity when (1) their color histogram changes in at least 75% of transitions (counters, energy bars), (2) they show the same content at the same step count in two lives that took different actions (clocks), or (3) after a RESET they are the only lines that differ from the level start (lives displays). Statistics restart whenever the mask grows.
 - Restarts and move budgets: a frame that returns to the level start after an ordinary action, up to masked lines, is a restart by the game. Lives that end at nearly the same length (8 actions or more) through two or more different state-action pairs reveal a move budget; such ends are not blamed on the last action, and planning prefers frontiers reachable within the budget. An action that ends a life four times, or the game twice from the same state, is given up.
 
@@ -67,7 +67,7 @@ The discount did not help on average: C1 had a higher mean RHAE than C in rooms 
 | ρ | rooms 1e-2, mazes 3e-4, cluttered rooms 1e-4, short-level rooms 3e-3, real games 3e-4 | best of a five- or six-value grid on calibration games; for rooms the top of the grid (1e-4 to 1e-2), for cluttered rooms its bottom |
 | q (difficulty 1 to 4) | rooms 1.000, 0.640, 0.550, 0.357; mazes 1.000, 0.923, 0.654, 0.182; cluttered rooms 0.733, 0.767, 0.933, 1.000; short-level rooms (open, pocket) 0.754, 0.684; real games 0.5 | B on calibration games |
 | q for CQ (difficulty 1 to 4) | rooms 1.000, 1.000, 0.654, 0.471 | C on the room calibration games at ρ = 1e-2 (exploratory) |
-| Action caps | 1,500 per level, 15,000 per game | per-level cap as in [7] |
+| Action caps | 1,500 per level, 15,000 per game | per-level cap as in [8] |
 | Click candidates per state / RESET penalty | 48 / 10 actions | fixed |
 | Status-bar threshold | 0.75 | fixed |
 | Seeds | 3 for calibration, 5 for evaluation, shared across configurations so runs are paired | fixed |
@@ -108,8 +108,9 @@ Each step logs the step, level, actions in the level, action, click coordinates,
 3. Lehmann, J., Aioanei, A., Vahdati, S. (2026). [Tycho: Active Abstraction with Programmatic World Models for ARC-AGI-3](https://arxiv.org/html/2607.28287). arXiv:2607.28287.
 4. Zeng, G. et al. (2026). [Schema: Discovering Unknown Environments via Agentic Program Induction](https://arxiv.org/pdf/2609.39140). arXiv:2609.39140.
 5. Wu, W. (2026). [Kepler: Auditable World Models for ARC-AGI-3](https://arxiv.org/pdf/2610.00834). arXiv:2610.00834.
-6. Tang, H., Key, D., Ellis, K. (2024). [WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment](https://arxiv.org/abs/2402.12275). NeurIPS 2024.
-7. Rodionov, S. (2026). [Executable World Models for ARC-AGI-3 in the Era of Coding Agents](https://arxiv.org/html/2605.05138v2). arXiv:2605.05138.
-8. Courtis, D., Li, W., Sanner, S. (2026). [OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration for ARC-AGI-3](https://arxiv.org/html/2607.01531v2). arXiv:2607.01531.
-9. Liew, K. H. (2026). [Explore Before You Solve: The Speed-Depth Trade-off in Epistemic Agents for ARC-AGI-3](https://arxiv.org/pdf/2605.25931). arXiv:2605.25931.
-10. Rudakov, E., Shock, J., Cowley, B. U. (2025). [Graph-Based Exploration for ARC-AGI-3 Interactive Reasoning Tasks](https://arxiv.org/abs/2512.24156). arXiv:2512.24156.
+6. Han, Q., Hu, K., Qiu, L., Wu, C., He, K. (2026). [VISTA: A Visual Harness for Reasoning in an Interactive World](https://arxiv.org/abs/2610.02200). arXiv:2610.02200.
+7. Tang, H., Key, D., Ellis, K. (2024). [WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment](https://arxiv.org/abs/2402.12275). NeurIPS 2024.
+8. Rodionov, S. (2026). [Executable World Models for ARC-AGI-3 in the Era of Coding Agents](https://arxiv.org/html/2605.05138v2). arXiv:2605.05138.
+9. Courtis, D., Li, W., Sanner, S. (2026). [OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration for ARC-AGI-3](https://arxiv.org/html/2607.01531v2). arXiv:2607.01531.
+10. Liew, K. H. (2026). [Explore Before You Solve: The Speed-Depth Trade-off in Epistemic Agents for ARC-AGI-3](https://arxiv.org/pdf/2605.25931). arXiv:2605.25931.
+11. Rudakov, E., Shock, J., Cowley, B. U. (2025). [Graph-Based Exploration for ARC-AGI-3 Interactive Reasoning Tasks](https://arxiv.org/abs/2512.24156). arXiv:2512.24156.
