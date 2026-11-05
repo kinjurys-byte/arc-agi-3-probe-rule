@@ -5,7 +5,7 @@ A probe rule derived from the ARC-AGI-3 score, and a test of when it pays.
 This repository holds the agent, the synthetic game suites, the results of every run reported in the paper, the figures and the pre-registration record of an ARC Prize 2026 Paper Track entry. All of it is released under CC0 1.0 (public domain dedication).
 
 - Paper: [Pay for Information Early](https://www.kaggle.com/competitions/arc-prize-2026-paper-track/writeups/pay-for-information-early), Kaggle Writeup, ARC Prize 2026 Paper Track (submitted 2026-11-05)
-- Code submission: ARC-AGI-3 Kaggle notebook (link added after submission)
+- Code submission: the public ARC-AGI-3 Kaggle notebook "ARC Prize 2026 - ARC-AGI-3 Starter" (final selection Version 9, configuration C), linked from the Writeup's project links
 - Technical appendix (A to H, cited by the paper): [docs/appendix.md](docs/appendix.md)
 
 ![One step of the agent](figs/figure1_agent_loop.png)
