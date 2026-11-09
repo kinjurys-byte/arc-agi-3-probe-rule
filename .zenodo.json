@@ -1,0 +1,34 @@
+{
+  "upload_type": "software",
+  "title": "Pay for Information Early: code, data and pre-registrations",
+  "creators": [
+    {
+      "name": "Kim, Yongdoo",
+      "orcid": "0009-0003-9037-104X"
+    }
+  ],
+  "description": "<p>Code, synthetic game suites, run results, figures, technical appendix and pre-registration record of the ARC Prize 2026 Paper Track entry <em>Pay for Information Early</em> (Kaggle Writeup, submitted 2026-11-05). The paper derives from the ARC-AGI-3 score a rule for when an agent should spend an action to learn what an untried action does (a probe), and tests it in pre-registered experiments on synthetic games and on the public ARC-AGI-3 games.</p>",
+  "access_right": "open",
+  "license": "cc0-1.0",
+  "language": "eng",
+  "keywords": [
+    "ARC-AGI-3",
+    "ARC Prize 2026",
+    "exploration",
+    "value of information",
+    "pre-registration",
+    "interactive reasoning"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.kaggle.com/competitions/arc-prize-2026-paper-track/writeups/pay-for-information-early",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "https://github.com/kinjurys-byte/arc-agi-3-probe-rule",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
