@@ -8,6 +8,9 @@ authors:
     orcid: "https://orcid.org/0009-0003-9037-104X"
 abstract: "Code, synthetic game suites, run results, figures, technical appendix and pre-registration record of the ARC Prize 2026 Paper Track entry Pay for Information Early, which derives from the ARC-AGI-3 score a rule for when an agent should try an action of unknown effect, and tests it in pre-registered experiments."
 license: CC0-1.0
+version: 1.0.0
+date-released: 2026-11-09
+doi: 10.5281/zenodo.24073835
 repository-code: "https://github.com/kinjurys-byte/arc-agi-3-probe-rule"
 url: "https://www.kaggle.com/competitions/arc-prize-2026-paper-track/writeups/pay-for-information-early"
 keywords:
